@@ -13,7 +13,6 @@ playAmyVoice.trg01b
 delay.30
 say.<
     Надеюсь, мне пока маленькие зеленые человечки не мерещатся?
-    
 >.1
 setCamera.3012
 playAmyVoice.trg01c
