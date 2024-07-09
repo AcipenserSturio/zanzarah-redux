@@ -1,0 +1,91 @@
+UID = "ED367294"
+Name = "FA609791"
+TriggerScript = """
+gotoRandomLabel.2.0
+label.0
+say.<Добро пожаловать в Эндеву, деревню эльфов.>.0
+goto.2
+label.1
+say.<Добро пожаловать, странник.>.0
+label.2
+playAnimation.13.-1
+setCamera.1000
+waitForUser
+ifPlayerHasSpecials.1.1
+label.20
+say.<Чем могу помочь?>.1
+choice.10.<Хочешь потренироваться?>
+choice.11.<Ловля диких фей>
+choice.12.<Не сейчас>
+waitForUser
+label.10
+setCamera.1006
+fight.220.0
+exit
+else
+goto.100
+label.12
+exit
+endIf
+exit
+label.11
+setTalkLabels.-1.-1.2
+talk.<
+    Ты хочешь ловить диких фей?
+    Тогда тебе нужны {4*магические шары}, но они очень редкие и дорого стоят.
+    Если у тебя есть магический шар, то ты можешь поймать ослабленную фею с помощью своей феи!
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Будем надеяться, что ты удачливее меня.
+    Я ловил только очень слабых фей.
+    Это тоскливо...
+>
+waitForUser
+goto.20
+label.100
+ifNpcModifierHasValue.0
+setTalkLabels.-1.-1.2
+talk.<
+    Ты действительно кажешься здесь странником, у тебя даже нет собственной феи.
+    Без феи ты не доберёшься в целости до {4*Тиралина}, столицы Занзары!
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Могу дать тебе совет: поговори с Повелителем фей {4*Руфусом} в таверне.
+    Он собирает фей у себя дома.
+    Может, он поможет тебе.
+>
+waitForUser
+setNpcModifier.-1.-1.1
+else
+setTalkLabels.-1.-1.0
+talk.<
+    Ты должна иметь собственную фею, иначе ты не доберёшься никуда в {4*Занзаре}.
+    Дикие феи прячутся на деревьях и за камнями.
+    Они нападут на тебя, если подойдешь слишком близко.
+>
+waitForUser
+endIf"""
+InitScript = """
+setModel.g300s30m
+wizform.0.20.11
+wizform.1.65.11
+wizform.2.37.11
+wizform.3.46.11
+wizform.4.12.11
+movementSpeed.14"""
+UpdateScript = """
+label.0
+moveSystem.0.3
+gotoRandomLabel.2.0
+goto.0
+label.1
+lookAtPlayer.10.1
+goto.0"""
+DefeatedScript = """
+setTalkLabels.-1.-1.0
+talk.<Приходи ко мне тренироваться в любое время.>
+waitForUser"""

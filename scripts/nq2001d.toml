@@ -1,0 +1,72 @@
+UID = "252FAF24"
+Name = "8A0B7EB1"
+TriggerScript = """
+setCamera.1005
+playAnimation.13.-1
+gotoRandomLabel.2.10
+label.10
+say.<Привет Эмми, охота на пикси была удачной?>.0
+goto.12
+label.11
+say.<Как идет охота на пикси?>.0
+label.12
+waitForUser
+ifPlayerHasSpecials.0.10
+setTalkLabels.-1.-1.2
+talk.<
+    Великолепно! Большое спасибо за пикси.
+    Вот твоя награда за {4*пять пикси}.
+>
+waitForUser
+givePlayerCards.1.0.53
+givePlayerCards.1.0.51
+givePlayerCards.1.0.74
+givePlayerCards.1.0.75
+givePlayerCards.1.0.76
+givePlayerCards.1.0.77
+givePlayerCards.1.0.78
+givePlayerCards.1.0.79
+givePlayerCards.1.0.52
+givePlayerCards.1.0.80
+givePlayerCards.1.0.81
+givePlayerCards.1.0.70
+givePlayerCards.4.0.90
+changeDatabase.F9B3D3A4
+exit
+endIf
+setTalkLabels.-1.-1.0
+talk.<
+    Извини, но у тебя не достаточно пикси для продажи.
+    Я дам тебе вознаграждение за {4*пять пойманных пикси}.
+>
+waitForUser
+label.0
+say.<Чем могу помочь?>.1
+choice.1.<Ключ от подвала>
+choice.2.<Дети>
+choice.3.<Удачной охоты.>
+waitForUser
+label.1
+setTalkLabels.-1.-1.0
+talk.<
+    Ты можешь использовать {4*ключ}, чтобы попасть в подвал моего дома.
+    Мой предок построил его на месте одной из дыр в Пустомирье, которая далеко от остального этого жуткого места.
+>
+waitForUser
+goto.0
+label.2
+setTalkLabels.-1.-1.0
+talk.<
+    Дариус находится у Рафи, чтоб обучится, моя дочка давно покинула меня, и я давно не получал от неё вестей.
+    Только остался Сиамус, который может помочь мне.
+    Но он мечтает стать великим и известным Повелителем фей… 
+>
+waitForUser
+goto.0
+label.3
+exit"""
+InitScript = """
+setModel.g207s23m
+movementSpeed.13
+wizform.1.1.2"""
+UpdateScript = "lookAtPlayer.0.1"

@@ -1,0 +1,91 @@
+UID = "70B749B4"
+Name = "3D758691"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+ifPlayerHasCards.1.0.56
+goto.10
+endIf
+ifNumberOfNpcsIs.1.5AB6E504
+setTalkLabels.-1.-1.0
+talk.<
+    Остался последний терновый куст на нашей земле.
+    Найди его и ты получишь Стихийный Ключ от {4*лифта}, чтобы попасть в Эфир.
+>
+waitForUser
+exit
+endIf
+ifNumberOfNpcsIs.2.5AB6E504
+setTalkLabels.-1.-1.0
+talk.<
+    На нашей земле осталось еще два терновых куста.
+    Найди их и я дам тебе Ключ Природы.
+>
+waitForUser
+exit
+endIf
+ifNumberOfNpcsIs.3.5AB6E504
+setTalkLabels.-1.-1.0
+talk.<Тебе надо найти и уничтожить еще три терновых куста, тогда получишь мою часть старого {4*лифта}, чтобы попасть в мир Друида.>
+waitForUser
+exit
+endIf
+ifNumberOfNpcsIs.4.5AB6E504
+setTalkLabels.-1.-1.0
+talk.<
+    В нашей долине растут четыре терновых куста.
+    Только когда они все исчезнут, я дам тебе Стихийный Ключ от {4*лифта} в Эфир.
+>
+waitForUser
+exit
+endIf
+ifNumberOfNpcsIs.0.5AB6E504
+setTalkLabels.-1.-1.0
+talk.<
+    Спасибо, что освободила наш дом от кустов.
+    Ты действительно заслужила {4*Стихийный Ключ Природы}.
+    Воспользуйся им, чтобы запустить лифт в Эфир.
+>
+waitForUser
+givePlayerCards.1.0.56
+exit
+endIf
+ifNumberOfNpcsIs.5.5AB6E504
+say.<Добро пожаловать в нашу лесную хижину.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    {4*Терновые кусты} заполонили всю нашу землю так, что мы больше не можем здесь жить.
+    Мой муж отправился за {4*помощью} на болото.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Найди все терновые кусты на нашей земле и уничтожь их.
+    У меня есть  {4*Стихийный Ключ Природы} от Эфира.
+    Я могу  отдать его тебе за эту работу.
+>
+waitForUser
+exit
+endIf
+label.10
+ifNumberOfNpcsIs.1.E3A72994
+say.<Спасибо, что освободила наш дом от этих кустов.>.0
+waitForUser
+exit
+endIf
+say.<Добро пожаловать в нашу лесную хижину.>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Мой муж еще не вернулся из {4*Болотной Деревни}.
+    Он не знает, что ты очистила нашу долину от терновых кустов.
+    Вот если бы кто-нибудь мог {4*сообщить}, что ему надо вернуться домой...
+>
+waitForUser
+exit"""
+InitScript = """
+setModel.w000s00m
+defaultWizForm.76.0.10
+movementSpeed.13"""
+UpdateScript = "lookAtPlayer.0.1"

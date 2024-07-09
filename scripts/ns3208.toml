@@ -1,0 +1,33 @@
+UID = "13CEC914"
+Name = "05360321"
+TriggerScript = """
+playSound.3
+say.<Кто меня беспокоит?>.0
+setCamera.1000
+waitForUser
+talk.<
+    Девушка у меня в подземелье?
+    Ты должно быть сумасшедшая, раз пришла сюда.
+    Я преподам тебе урок!
+>
+waitForUser
+fight.-1.0"""
+InitScript = """
+setNpcType.3
+defaultWizForm.102.0.61
+defaultWizForm.144.1.61
+defaultWizForm.170.2.61
+defaultWizForm.39.3.61"""
+DefeatedScript = """
+talk.<
+    Не надо было мне покидать Пустомирье.
+    Наёмничья жизнь закончилась так печально.
+    Но знаешь...
+    пожалуй я отправлюсь с тобой, здесь очень скучно.
+    Все твои враги будут бежать в страхе.
+>
+givePlayerCards.1.2.102
+waitForUser
+createDynamicItems.4.5.-1
+startEffect.1.-1
+removeNpc"""

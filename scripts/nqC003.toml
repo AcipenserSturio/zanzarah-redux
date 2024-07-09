@@ -1,0 +1,53 @@
+UID = "36C11DB4"
+Name = "1C1716B1"
+TriggerScript = """
+deployNpcAtTrigger.73.1
+setCamera.3002
+changeWaypoint.21.22
+changeWaypoint.22.23
+changeWaypoint.23.24
+changeWaypoint.24.-1
+playAnimation.13.-1
+say.<Добро пожаловать на следующий бой турнира.>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Спасибо, что принесла мне мою любимую фею.
+    Это лучшая фея в моей коллекции.
+    С ее помощью я поймаю {4*Квинлина} и всех остальных гномов - предателей.
+    Что ж, давай биться за  карту!
+>
+waitForUser
+setCamera.1006
+fight.-1.0
+exit"""
+InitScript = """
+setModel.g203s23m
+defaultWizForm.68.0.39
+defaultWizForm.167.1.44
+defaultWizForm.103.2.41
+defaultWizForm.30.3.38
+defaultWizForm.177.4.40"""
+UpdateScript = """
+label.0
+idle
+ifTriggerIsActive.69
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.3003
+setTalkLabels.-1.-1.0
+talk.<
+    Я проиграл, несмотря на моего {4*Сегбуза}?
+    Возможно, он не так хороша, как я всегда думал.
+    Забери ее обратно, пойду поищу другую фею.
+>
+waitForUser
+givePlayerCards.1.2.68
+changeWaypoint.-1.25
+changeWaypoint.25.26
+changeWaypoint.26.27
+changeWaypoint.27.28
+removeNpc"""
+VictoriousScript = "killPlayer"

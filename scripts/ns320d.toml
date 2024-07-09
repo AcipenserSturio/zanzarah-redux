@@ -1,0 +1,86 @@
+UID = "63D94324"
+Name = "F8438821"
+TriggerScript = """
+deployNpcAtTrigger.66.1
+playAnimation.13.-1
+setCamera.3000
+say.<Человек, как интересно!>.0
+waitForUser
+setCamera.1000
+setTalkLabels.-1.-1.2
+talk.<
+    Меня зовут Рагмаш Жестокий, но зови меня Тот-Кто-Заставит-Тебя-Вернуться.
+    Ты уже столкнулась с моими подданными.
+    Но я не совсем такой как они.
+>
+waitForUser
+talk.<
+    Я люблю испытания со своими противниками.
+    Для моего испытания тебе потребуется сразиться со мной, использую я определённую колоду.
+    В данном случае я хочу, чтоб ты использовала фей Природы, Воды, Сай, Камня и Хаоса.
+>
+waitForUser
+goto.1
+else
+goto.10
+label.1
+ifPlayerHasSpecials.3.3
+goto.2
+else
+goto.10
+label.2
+ifPlayerHasSpecials.3.6
+goto.3
+else
+goto.10
+label.3
+ifPlayerHasSpecials.3.7
+goto.4
+else
+goto.10
+label.4
+ifPlayerHasSpecials.3.11
+talk.<
+    Твоя коллекция фей все еще скромна, но небольшое сражение не помешает.
+    Для тренировки, хи-хи...
+    Как раз у меня есть фея, связанная с вашим миром.
+>
+waitForUser
+fight.-1.-1
+else
+label.10
+setTalkLabels.-1.-1.0
+talk.<
+    И только после того, как ты придёшь с ними, я сражусь с тобой.
+    Если победишь, что маловероятно, то я отдам тебе эту фею, что летает за мной.
+    У тебя не получится.
+>
+waitForUser
+exit"""
+InitScript = """
+setModel.u001s01m
+defaultWizForm.170.0.30
+defaultWizForm.191.1.35
+defaultWizForm.83.2.32
+defaultWizForm.143.3.35
+defaultWizForm.113.4.32"""
+UpdateScript = """
+label.0
+lookAtPlayer.5.1
+ifTriggerIsActive.67
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+removeWizForms
+setCamera.1000
+talk.<
+    Я не верю в это...
+    как я мог проиграть?
+    Забирай эту чёртову фею, не хочу ничего больше иметь с вашим миром, и жди следующей встречи, человек!
+>
+givePlayerCards.1.2.170
+waitForUser
+delay.10
+startEffect.0.-1
+removeNpc"""

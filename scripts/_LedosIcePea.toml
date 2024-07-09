@@ -1,0 +1,17 @@
+UID = "1EB4A4A4"
+Name = "79110B91"
+InitScript = """
+gotoRandomLabel.4.0
+label.0
+defaultWizForm.178.0.36
+goto.4
+label.1
+defaultWizForm.179.0.39
+goto.4
+label.2
+defaultWizForm.147.0.36
+goto.4
+label.3
+defaultWizForm.148.0.38
+goto.4
+label.4"""

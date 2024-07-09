@@ -1,0 +1,112 @@
+UID = "6933B394"
+Name = "2604EC91"
+TriggerScript = """
+setCamera.1000
+say.<Добро пожаловать в мой магазин.>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Путешествующая Повелительница фей! Какая удача! Я отчаянно ищу Фею Света {4*Скелхрома}.
+    Если ты его найдешь, я дам тебе уникальную фею {4*Сегбуза}.
+    
+>
+waitForUser
+ifPlayerHasCards.1.0.26
+setTalkLabels.-1.-1.2
+talk.<
+    Говорят, что ты нашла {4*Посох} гномов у Тёмных Эльфов.
+    Я никогда не верила этим гномам! Тот, кто живет под землей, не способен ни на что хорошее.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Выходит, это правда: гномы создали союз с {4*Тёмными Эльфами}!>
+waitForUser
+goto.20
+endIf
+label.10
+say.<Я не только продаю ценные предметы, но и собираю лучших фей.>.1
+choice.0.<Поменять Скелхрома на Сегбуза>
+choice.1.<Купить предметы>
+choice.2.<До встречи>
+waitForUser
+label.0
+ifPlayerHasCards.1.2.228
+setTalkLabels.-1.-1.0
+talk.<
+    Хм, ты пытаешься продать мне ненастоящего {4*Скелхрома}.
+    Ты точно не пользовалась запрещённой магией, чтоб его получить?
+>
+waitForUser
+goto.10
+endIf
+setTalkLabels.-1.-1.2
+talk.<Ты можешь продавать только {4*активную фею}.>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Жаль, но у тебя нет с собой {4*Скелхрома}.>
+waitForUser
+goto.10
+exit
+label.1
+tradingCurrency.C564B4A3
+tradingItem.5.23173793
+tradingItem.10.99D2B4A3
+tradingItem.20.AD58B4A3
+tradingItem.20.709DB4A3
+tradingItem.25.2E2FB8A3
+waitForUser
+goto.10
+exit
+label.2
+exit
+label.20
+say.<Я не только продаю ценные предметы, но и собираю лучших фей.>.1
+choice.15.<Поменять Скелхрома на Сегбуза>
+choice.14.<Купить предметы>
+choice.2.<До встречи>
+waitForUser
+label.14
+tradingCurrency.C564B4A3
+tradingItem.5.23173793
+tradingItem.10.99D2B4A3
+tradingItem.20.AD58B4A3
+tradingItem.20.709DB4A3
+tradingItem.25.2E2FB8A3
+waitForUser
+goto.20
+label.15
+ifPlayerHasCards.1.2.228
+setTalkLabels.-1.-1.0
+talk.<
+    Наконец, я полностью собрала коллекцию фей своей мечты! Вот, возьми {4*Сегбуза}.
+>
+waitForUser
+tradeWizform.68
+setTalkLabels.-1.-1.2
+talk.<
+    На {4*Большом Дереве} на болоте будет крупный турнир.
+    В нем будут участвовать лучшие Повелители фей.
+    
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Кто победит, тот отправиться искать предателя {4*Квинлина}.
+    Ты должна принять участие в турнире, Эми.
+>
+waitForUser
+removeWizForms
+changeDatabase.25A37894
+exit
+endIf
+setTalkLabels.-1.-1.2
+talk.<Ты можешь продавать только {4*активную фею}.>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Жаль, но у тебя нет с собой {4*Скелхрома}.>
+waitForUser
+goto.20"""
+InitScript = """
+setModel.g201s21m
+wizform.0.68.40"""
+UpdateScript = "lookAtPlayer.-1.1"

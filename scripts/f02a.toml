@@ -1,0 +1,79 @@
+UID = "015ABF24"
+Name = "B18BDDB1"
+TriggerScript = """
+ifPlayerHasCards.0.2.234
+say.<У тебя уже есть  фея!>.0
+waitForUser
+exit
+else
+setTalkLabels.-1.-1.2
+talk.<
+    Естественные феи обитают во всех областях Занзары.
+    К ним относятся феи Природы, Воздуха, Воды и Камня.
+    Большинство жителей Занзары предпочитает использовать именно их.
+>
+talk.<
+    Сверхъествественныые феи являются очень редкими, сильными и опасными существами.
+    В Занзаре их приручают, но в бою используют нечасто.
+    К ним относятся феи Света, Тьмы, Сай и Хаоса.
+>
+waitForUser
+setTalkLabels.10.11.1
+talk.<
+    Вы хотите взять себе эту фею?
+    Вы уверены, что именно эту, а не одну из двух других?
+    Руфус разрешил вам взять только одну из трёх!
+>
+waitForUser
+exit
+label.10
+ifNpcModifierHasValue.1
+removeWizForms
+tradeWizform.123
+endIf
+ifNpcModifierHasValue.2
+removeWizForms
+tradeWizform.93
+endIf
+ifNpcModifierHasValue.3
+removeWizForms
+tradeWizform.27
+endIf
+ifNpcModifierHasValue.0
+removeWizForms
+tradeWizform.163
+endIf
+setCamera.1006
+removeNpcAtTrigger.3
+removeNpcAtTrigger.4
+removeNpc
+exit
+label.11
+exit
+endIf"""
+InitScript = """
+ifNpcModifierHasValue.1
+setNpcType.3
+setCollision.0
+wizform.0.123.0
+exit
+endIf
+ifNpcModifierHasValue.2
+setNpcType.3
+setCollision.0
+wizform.0.93.0
+exit
+endIf
+ifNpcModifierHasValue.3
+setNpcType.3
+setCollision.0
+wizform.0.27.0
+exit
+endIf
+ifNpcModifierHasValue.0
+setNpcType.3
+setCollision.0
+wizform.0.163.0
+exit
+endIf"""
+UpdateScript = "lookAtPlayer.0.0"

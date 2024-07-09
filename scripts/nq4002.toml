@@ -1,0 +1,61 @@
+UID = "D23AD1A4"
+Name = "44EB3001"
+TriggerScript = """
+setCamera.3000
+changeWaypoint.-1.-1
+playAnimation.13.-1
+say.<Стой, кто идет?!>.0
+waitForUser
+ifNumberOfNpcsIs.0.2989FB4
+setCamera.1006
+setTalkLabels.-1.-1.2
+talk.<
+    Ты сразилась с моими солдатами, но теперь пришёл мой черёд.
+    Этот бой точно станет последним, и ты навсегда покинешь Занзару.
+    Я, Нхестад Отважный, лучший боец и полководец Пустомирья.
+>
+waitForUser
+fight.-1.0
+else
+setTalkLabels.-1.-1.0
+talk.<
+    Человек?
+    Ты недостойна вызвать меня, генерала {4*Тёмных Эльфов}, на поединок.
+    Я буду сражаться с тобой, если ты победишь трёх моих солдат, окружающих Данмор.
+    Только тогда я докажу тебе, что твои усилия напрасны
+>
+waitForUser
+deployNpcAtTrigger.73.1
+deployNpcAtTrigger.32.0
+setCamera.1006
+delay.10
+endIf"""
+InitScript = """
+setModel.u000s00m
+defaultWizForm.38.0.33
+defaultWizForm.190.1.29
+defaultWizForm.27.2.27
+defaultWizForm.120.3.30
+defaultWizForm.200.4.28"""
+UpdateScript = """
+label.0
+idle
+ifTriggerIsActive.28
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.1000
+talk.<
+    А ты неплохо сражаешься...
+    Подожди нашей следующей встречи, я пересоберу колоду, тогда снова скрестим фей, и я возьму реванш.
+    В знак моего уважения к достойным противникам я оставлю тебе Раковину, которую мои люди отобрали у этих гоблинов.
+>
+waitForUser
+givePlayerCards.1.0.15
+delay.15
+setCamera.3003
+changeWaypoint.-1.4200
+changeWaypoint.4200.4201
+changeWaypoint.4201.4202
+removeNpc"""

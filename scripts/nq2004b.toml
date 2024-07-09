@@ -1,0 +1,66 @@
+UID = "0D317E14"
+Name = "6E781E01"
+TriggerScript = """
+setCamera.3003
+playAnimation.13.-1
+ifNpcModifierHasValue.1
+say.<Привет.>.0
+waitForUser
+setTalkLabels.10.11.1
+talk.<
+    Только храбрый Повелитель фей может стать лучшим! Хватит ли у тебя смелости состязаться со мной, {4*Руфусом - Повелителем Фей}?
+>
+waitForUser
+else
+setNpcModifier.-1.-1.1
+say.<Привет от  Руфуса - Повелителя фей.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Ты хорошо обходишься с моей феей?
+    Ее благополучие для меня очень много значит.
+    Её надо тренировать и снабдить сильной магией.
+    
+>
+waitForUser
+setCamera.1006
+setTalkLabels.10.11.1
+talk.<
+    Только в сражениях с другими Повелителями фей ты можешь собрать достойную коллекцию фей.
+    Ты готова встретиться со мной в дружеском поединке?
+>
+waitForUser
+endIf
+label.10
+fight.-1.0
+label.11"""
+InitScript = """
+setModel.g202s22m
+movementSpeed.10
+defaultWizForm.0.0.14
+defaultWizForm.72.1.8
+defaultWizForm.96.2.9
+defaultWizForm.158.3.13
+defaultWizForm.4.4.16"""
+UpdateScript = """
+label.0
+moveSystem.1.2
+gotoRandomLabel.3.0
+goto.0
+label.1
+playAnimation.0.-1
+lookAtPlayer.90.1
+goto.0
+label.2
+playAnimation.0.-1
+lookAtPlayer.20.1
+goto.0"""
+DefeatedScript = """
+setTalkLabels.-1.-1.0
+talk.<
+    Однажды ты станешь знаменитым  Повелителем фей.
+    Повелитель фей - человек! Раньше в такое никто бы и не поверил!
+>
+waitForUser
+changeDatabase.CD6BA214"""
+VictoriousScript = "killPlayer"

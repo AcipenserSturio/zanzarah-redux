@@ -1,0 +1,34 @@
+UID = "E943B9B4"
+Name = "BA951691"
+TriggerScript = """
+setCamera.1000
+setTalkLabels.5.10.1
+talk.<
+    Человеческое существо! Ты смешной противник.
+    Ты хочешь вызвать меня на бой?
+>
+waitForUser
+label.5
+setCamera.1006
+fight.-1.0
+label.10
+setTalkLabels.-1.-1.0
+talk.<Это трусливое, но мудрое решение.>
+waitForUser"""
+InitScript = """
+setModel.u003s03m
+defaultWizForm.25.0.35
+defaultWizForm.99.1.30
+defaultWizForm.145.2.34
+defaultWizForm.146.3.40
+defaultWizForm.101.4.38"""
+UpdateScript = "lookAtPlayer.-1.1"
+DefeatedScript = """
+setCamera.1000
+say.<
+    Ты назойливая тварь! И однажды я тебе отомщу!
+>.0
+waitForUser
+startEffect.0.-1
+removeNpc"""
+VictoriousScript = "killPlayer"

@@ -1,0 +1,47 @@
+UID = "DF234A14"
+Name = "075DE881"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+ifNpcModifierHasValue.0
+goto.0
+else
+goto.1
+endIf
+exit
+label.0
+say.<Привет, как дела у моей маленькой феи?>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Если тебе повезет, ты найдешь мою вторую фею.
+    Она убежала недавно.
+    С тех пор ее видели в садах...
+>
+waitForUser
+ifPlayerHasCards.1.2.97
+setTalkLabels.-1.-1.2
+talk.<
+    ...
+    подожди...
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Ты его нашла, я думал, что потерял Ампертара навсегда.
+    Знаешь, за помощь оставь его себе, а я в знак благодарности отдам тебе эту штуку.
+    Скоро я вернусь в Монагам, друг гномов.
+>
+waitForUser
+givePlayerCards.1.0.86
+setNpcModifier.-1.-1.1
+endIf
+exit
+label.1
+say.<Ещё раз спасибо огромное тебе.>.0
+waitForUser
+exit"""
+InitScript = """
+setModel.d000s00m
+startActorEffect.0"""
+UpdateScript = "lookAtPlayer.-1.1"

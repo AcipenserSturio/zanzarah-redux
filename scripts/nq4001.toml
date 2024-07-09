@@ -1,0 +1,30 @@
+UID = "02989FB4"
+Name = "2DC08F91"
+TriggerScript = """
+setCamera.1000
+changeWaypoint.-1.-1
+say.<Человеческим духом пахнет?>.0
+waitForUser
+setCamera.1006
+fight.-1.0"""
+InitScript = """
+setModel.u003s03m
+defaultWizForm.157.0.20
+defaultWizForm.78.1.19
+defaultWizForm.9.2.23
+defaultWizForm.69.3.18
+defaultWizForm.18.4.21"""
+UpdateScript = """
+label.0
+idle
+ifPlayerIsClose.40
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.1000
+say.<Ты не сможешь победить всех нас!>.0
+waitForUser
+startEffect.0.-1
+removeNpc"""
+VictoriousScript = "killPlayer"

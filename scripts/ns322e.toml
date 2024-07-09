@@ -1,0 +1,151 @@
+UID = "84E22024"
+Name = "AE987B81"
+TriggerScript = """
+playAnimation.13.-1
+setCamera.1000
+say.<Как приятно тебя видеть.>.0
+waitForUser
+ifNpcModifierHasValue.1
+setTalkLabels.-1.-1.0
+talk.<
+    У тебя нет необходимой эволюции Тайнфола.
+    Пока что я не могу пополнить элементаль.
+    Мой старый друг Нафни продавал Камни Природы, остальные либо поищи по Занзаре, либо сделай у каменщиков.
+>
+waitForUser
+exit
+endIf
+setTalkLabels.-1.-1.2
+talk.<
+    Я давно не видел ни одного Повелителя фей.
+    {4*Тёмные Эльфы} всех запугали! Поэтому я пришел в эту пещеру.
+    Мои любимые феи и я можем здесь спокойно жить.
+>
+waitForUser
+setTalkLabels.0.1.1
+talk.<
+    Ох, уж очень здесь скучно.
+    У нас давно не было поединков между феями, и  мы действительно теряем свои навыки.
+    Как насчет небольшого соревнования?
+>
+waitForUser
+label.0
+setCamera.1006
+fight.-1.0
+exit
+label.1
+exit"""
+InitScript = """
+setModel.d004s00m
+gotoRandomLabel.13.0
+label.0
+defaultWizForm.58.0.31
+defaultWizForm.60.1.31
+defaultWizForm.187.2.31
+defaultWizForm.188.0.31
+defaultWizForm.189.4.31
+goto.13
+label.1
+defaultWizForm.190.0.31
+defaultWizForm.191.1.31
+defaultWizForm.192.2.31
+defaultWizForm.59.3.31
+defaultWizForm.193.4.39
+goto.13
+label.2
+defaultWizForm.194.0.31
+defaultWizForm.195.1.31
+defaultWizForm.207.2.31
+defaultWizForm.58.3.31
+defaultWizForm.60.4.31
+goto.13
+label.3
+defaultWizForm.187.0.31
+defaultWizForm.188.1.31
+defaultWizForm.189.2.31
+defaultWizForm.190.3.31
+defaultWizForm.191.4.31
+goto.13
+label.4
+defaultWizForm.192.0.31
+defaultWizForm.59.1.31
+defaultWizForm.193.2.31
+defaultWizForm.194.3.31
+defaultWizForm.195.4.31
+goto.13
+label.5
+defaultWizForm.207.0.31
+defaultWizForm.58.1.31
+defaultWizForm.60.2.31
+defaultWizForm.187.3.31
+defaultWizForm.188.4.31
+goto.13
+label.6
+defaultWizForm.189.0.31
+defaultWizForm.190.1.31
+defaultWizForm.191.2.31
+defaultWizForm.192.3.31
+defaultWizForm.59.4.31
+goto.13
+label.7
+defaultWizForm.193.0.31
+defaultWizForm.194.1.31
+defaultWizForm.195.2.31
+defaultWizForm.207.3.31
+defaultWizForm.58.4.31
+goto.13
+label.8
+defaultWizForm.60.0.31
+defaultWizForm.187.1.31
+defaultWizForm.188.2.31
+defaultWizForm.189.3.31
+defaultWizForm.190.4.31
+goto.13
+label.9
+defaultWizForm.191.0.31
+defaultWizForm.192.1.31
+defaultWizForm.59.2.31
+defaultWizForm.193.3.31
+defaultWizForm.194.4.31
+goto.13
+label.10
+defaultWizForm.195.0.31
+defaultWizForm.207.1.31
+defaultWizForm.58.2.31
+defaultWizForm.60.3.31
+defaultWizForm.187.4.31
+goto.13
+label.11
+defaultWizForm.188.0.31
+defaultWizForm.189.1.31
+defaultWizForm.190.2.31
+defaultWizForm.191.3.31
+defaultWizForm.192.4.31
+goto.13
+label.12
+defaultWizForm.59.0.31
+defaultWizForm.193.1.31
+defaultWizForm.194.2.31
+defaultWizForm.195.3.31
+defaultWizForm.207.4.31
+goto.13
+label.13"""
+UpdateScript = "lookAtPlayer.-1.1"
+DefeatedScript = """
+setCamera.1000
+setNpcModifier.-1.-1.1
+setTalkLabels.-1.-1.2
+talk.<
+    Великолепно, твои феи действительно потрясающие! Ты оценила мою удивительную коллекцию?
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Все они были {4*Тайнфолами}, феями Природы.
+    Но я сумел превратить их в различные существа, используя {4*эволюционые камни}.
+    Может, ты сама как-нибудь попробуешь мой метод?
+    Приноси мне, и я помогу тебе собрать Тайновый Элементаль.
+>
+givePlayerCards.1.0.91
+waitForUser
+changeDatabase.85E22024"""

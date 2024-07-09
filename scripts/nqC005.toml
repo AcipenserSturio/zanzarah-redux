@@ -1,0 +1,50 @@
+UID = "7266B9B4"
+Name = "E95016B1"
+TriggerScript = """
+changeWaypoint.-1.-1
+setCamera.1000
+playAnimation.13.-1
+say.<Ты действительно веришь, что мы, гномы, помогаем Тёмным Эльфам?>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<С тех пор, как ты нашла на арене {4*артефакт}, жители Занзары поверили, что мы, гномы, виноваты в наступившем хаосе.>
+waitForUser
+talk.<
+    Мы не виновны, или я не Гном Лассе! Я схожу к {4*Друиду}  и попрошу его совета.
+    Может он знает, где держат моего отца, {4*Квинлина}.
+>
+waitForUser
+setTalkLabels.1.2.1
+talk.<
+    Мы должны прийти к нему в Эфир.
+    Встретимся в {4*Белом Соборе}?
+    
+>
+waitForUser
+label.1
+delay.3
+setTalkLabels.-1.-1.0
+talk.<Хорошо, встретимся в {4*Белом Соборе}.>
+waitForUser
+changeWaypoint.-1.2
+removeNpc
+exit
+label.2
+delay.3
+setTalkLabels.-1.-1.0
+talk.<
+    Я уверен, что Друид расскажет нам больше о происходящем у нас бедствии.
+    Мы должны сходить к нему в {4*Белый Собор}.
+>
+waitForUser
+changeWaypoint.-1.2
+removeNpc
+exit"""
+InitScript = "setModel.d006s02m"
+UpdateScript = """
+label.0
+idle
+ifPlayerIsClose.20
+startPrelude
+endIf
+goto.0"""

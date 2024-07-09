@@ -1,0 +1,53 @@
+UID = "1826D0B4"
+Name = "F56DC381"
+TriggerScript = """
+playAnimation.13.-1
+setCamera.1000
+ifPlayerHasCards.1.0.22
+say.<Ты спасла нашего пропавшего вождя!>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Как Друид мог похитить Квинлина?
+    Ты должна расстроить темные планы Друида и уничтожить его {4*Стража}.
+>
+waitForUser
+goto.0
+endIf
+say.<Человек в Занзаре?>.0
+waitForUser
+label.0
+setTalkLabels.1.2.1
+talk.<
+    Ты за время путешествия, несомненно, нашла  немало золота.
+    За золото ты можешь купить у нас кристаллы.
+    Я продам {4*один кристалл} за {4*пять монет}.
+>
+waitForUser
+label.1
+ifPlayerHasCards.5.0.4
+removePlayerCards.5.0.4
+setTalkLabels.-1.-1.0
+talk.<
+    Вот твой кристалл.
+    Гномы никогда не обманывают своих покупателей.
+    У меня есть еще {4*два кристалла}.
+    
+>
+waitForUser
+givePlayerCards.1.0.6
+changeDatabase.453A1534
+exit
+endIf
+setTalkLabels.-1.-1.0
+talk.<
+    У тебя нет пяти золотых монет! Ты пытаешься обмануть меня, человек?
+>
+waitForUser
+exit
+label.2
+exit"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.11.0.10"""
+UpdateScript = "lookAtPlayer.-1.1"

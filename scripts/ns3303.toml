@@ -1,0 +1,45 @@
+UID = "B68F5714"
+Name = "0E15A381"
+TriggerScript = """
+setCamera.3001
+changeWaypoint.-1.0
+playAnimation.13.-1
+say.<Ты победила всех моих братьев?>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Возможно ты достойна того, чтобы использовать наш {4*Стихийный Ключ Земли}.
+    Но сначала тебе придется доказать свои способности в битве со мной.
+    Готовься!
+>
+waitForUser
+fight.-1.0"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.72.0.30
+defaultWizForm.13.1.35
+defaultWizForm.66.2.32
+defaultWizForm.94.3.30
+defaultWizForm.8.4.28"""
+UpdateScript = """
+label.0
+idle
+ifTriggerIsActive.19
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.3001
+deployNpcAtTrigger.19.1
+setTalkLabels.-1.-1.2
+talk.<
+    Ты действительно заслужила {4*Стихийный Ключ Земли}.
+    Возьми его, теперь все надежды гномов - на человеческую девушку.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Правильно используй ключ и приходи ко мне, если хочешь узнать больше о легендах {4*Занзары}.>
+givePlayerCards.1.0.57
+waitForUser
+changeWaypoint.0.1
+changeDatabase.4D925714"""

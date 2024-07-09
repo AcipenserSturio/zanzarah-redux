@@ -1,0 +1,31 @@
+UID = "49F089B4"
+Name = "89D5E391"
+TriggerScript = """
+deployNpcAtTrigger.53.1
+setCamera.3005
+changeWaypoint.10.11
+setCamera.3006
+deployNpcAtTrigger.50.0
+changeWaypoint.12.13
+talk.<
+    Я сражался с {4*Тёмными Эльфами}, но мои феи были слишком слабы.
+    Сначала на меня напали {4*солдаты}...
+    и когда мои феи устали, на меня неожиданно напал их {4*генерал}...
+>
+waitForUser
+changeDatabase.3418ED04
+exit"""
+InitScript = """
+setModel.g007s01m
+defaultWizForm.187.0.19
+defaultWizForm.152.1.14
+defaultWizForm.51.2.15
+defaultWizForm.147.3.17
+defaultWizForm.174.4.13"""
+UpdateScript = """
+label.0
+idle
+ifTriggerIsActive.54
+startPrelude
+endIf
+goto.0"""

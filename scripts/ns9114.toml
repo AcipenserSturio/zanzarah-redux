@@ -1,0 +1,23 @@
+UID = "DEC1BEA4"
+Name = "60D826B1"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<Привет, Эмми.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<Спасибо, я смог вернуться к управлению {4*Монагамом}, хотя политика никогда не была моей сильной стороной.>
+waitForUser
+talk.<
+    Продолжай свое путешествие, Эмми.
+    {4*Волшебный ключ} позволит  тебе попасть в новые районы {4*Занзары}, которые были для тебя закрыты.
+    Ты должна воспользоваться им!
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Если когда-нибудь столкнешься с {4*Рафи}, передай ему привет от меня.>
+waitForUser"""
+InitScript = """
+setModel.d005s01m
+defaultWizForm.129.0.10"""
+UpdateScript = "lookAtPlayer.0.1"

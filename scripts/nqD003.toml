@@ -1,0 +1,50 @@
+UID = "ABF0DA04"
+Name = "F8438821"
+TriggerScript = """
+ifPlayerHasSpecials.3.2
+setCamera.1000
+changeWaypoint.-1.-1
+playAnimation.13.-1
+say.<Держись от меня подальше, человек!>.0
+waitForUser
+talk.<
+    Уверена, что победишь меня?
+    Пока я нахожусь тут, то магический барьер не спадёт.
+    Давай попробуй, но я непобедим.
+    Особенно я взял эту ужасную фею Света, которая причиняет мне боль.
+>
+waitForUser
+setCamera.1006
+fight.-1.1
+exit
+endIf
+playVideo.18
+setTalkLabels.-1.-1.0
+setCamera.1000
+changeWaypoint.-1.-1
+exit
+endIf"""
+InitScript = """
+setModel.u001s01m
+defaultWizForm.67.0.34
+defaultWizForm.22.1.30
+defaultWizForm.172.2.36
+defaultWizForm.151.3.32
+defaultWizForm.90.4.35"""
+UpdateScript = """
+label.0
+lookAtPlayer.10.1
+ifPlayerIsClose.20
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.1000
+say.<
+    Как я, величайший владыка Пустомирья, мог проиграть человеку, а особенно девушке?
+    Это недопустимо!
+>.0
+waitForUser
+startEffect.0.-1
+removeNpc"""
+VictoriousScript = "killPlayer"

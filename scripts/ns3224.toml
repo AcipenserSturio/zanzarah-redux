@@ -1,0 +1,68 @@
+UID = "008C94A4"
+Name = "0648ACA1"
+TriggerScript = """
+ifPlayerHasCards.0.0.22
+setTalkLabels.-1.-1.0
+playAmyVoice.trg07e
+setCamera.1000
+changeWaypoint.-1.-1
+talk.<
+    Э-э-э! Ты не могла сюда попасть без нужного предмета...
+    Ахтунг, багоюзер! Вызываем багоубойную гвардию!
+>
+exit
+endIf
+setCamera.1000
+ifNpcModifierHasValue.1
+say.<Человеческий детеныш снова пришел к нам!>.0
+waitForUser
+setTalkLabels.10.20.1
+talk.<
+    Сейчас не лучший момент для схватки – я все еще восстанавливаю силы, потерянные в последнем сражении.
+    Тебе нужно еще раз создать лестницу?
+>
+waitForUser
+exit
+label.10
+createSceneObjects.0
+exit
+label.20
+exit
+endIf
+say.<У тебя должны быть сильные феи, чтобы  осмелиться прийти в такое место, человеческий детеныш.>.0
+waitForUser
+setTalkLabels.0.1.0
+talk.<
+    Если ты победишь меня и моих друзей в честной схватке, я отдам тебе карту Огня, которую мы бережём от злых рук! Ты готова сражаться?
+>
+waitForUser
+setCamera.3001
+fight.-1.1
+exit"""
+InitScript = """
+setNpcType.3
+defaultWizForm.221.0.58
+defaultWizForm.2.1.58
+defaultWizForm.11.2.58
+defaultWizForm.61.3.58
+defaultWizForm.76.4.58"""
+UpdateScript = """
+ifNpcModifierHasValue.1
+lookAtPlayer.0.0
+endIf
+exit
+label.0
+lookAtPlayer.5.0
+ifPlayerIsClose.15
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setTalkLabels.-1.-1.0
+talk.<
+    Ты самый сильный коллекционер фей, из всех, которых я когда-либо встречал.
+    Ты заслужила доступ к {4*Карте Огня}, используй её с умом.
+>
+waitForUser
+createSceneObjects.0
+setNpcModifier.-1.-1.1"""

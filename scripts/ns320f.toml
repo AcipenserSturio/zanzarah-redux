@@ -1,0 +1,47 @@
+UID = "CDE4C594"
+Name = "386EBA91"
+TriggerScript = """
+playAnimation.13.-1
+setCamera.1000
+say.<Добро пожаловать ко мне.>.0
+waitForUser
+setTalkLabels.0.1.1
+talk.<
+    Вижу, ты тоже собираешь фей.
+    Если ты дашь мне всего лишь {4*150 монет}, я помогу тебе обучать фей.
+    Хочешь  потренироваться?
+>
+waitForUser
+label.0
+ifPlayerHasCards.60.0.4
+removePlayerCards.150.0.4
+fight.-1.-1
+else
+setTalkLabels.-1.-1.0
+talk.<
+    Жаль, что у тебя недостаточно денег.
+    Возвращайся, когда разбогатеешь.
+>
+waitForUser
+endIf
+exit
+label.1
+setTalkLabels.-1.-1.0
+talk.<
+    Как жаль.
+    Может в другой раз.
+    Но остерегайся злобных {4*Тёмных Эльфов} из Пустомирья, они ненавидят коллекционеров фей!
+>
+waitForUser"""
+InitScript = """
+setModel.g001s01m
+wizform.0.9.21
+wizform.1.10.21
+wizform.2.11.21
+wizform.3.123.21
+wizform.4.124.21"""
+UpdateScript = "lookAtPlayer.-1.1"
+DefeatedScript = """
+setTalkLabels.-1.-1.0
+talk.<Неплохо, приходи еще в любое время ...>
+waitForUser"""

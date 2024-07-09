@@ -1,0 +1,27 @@
+UID = "F82FD124"
+Name = "41632581"
+TriggerScript = """
+setCamera.1000
+say.<Люди все такие высокие и худые?>.0
+waitForUser
+say.<
+    Я - представитель гильдии каменщиков.
+    Хочешь ли я из пустышек сделаю Эволюционный камень?
+>.1
+choice.5.<Да>
+choice.6.<Нет>
+waitForUser
+label.5
+tradingCurrency.BC23A403
+tradingItem.1.51688503
+tradingItem.1.21254503
+tradingItem.1.11131203
+tradingItem.1.91525203
+tradingItem.1.AAEB4603
+waitForUser
+label.6
+exit"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.39.0.10"""
+UpdateScript = "lookAtPlayer.0.1"

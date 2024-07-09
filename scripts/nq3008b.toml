@@ -1,0 +1,39 @@
+UID = "9C20B994"
+Name = "02B57D91"
+TriggerScript = """
+setCamera.3001
+changeWaypoint.5.6
+playAnimation.13.-1
+say.<Человек в Тиралине?>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Может, ты поможешь гоблинам.
+    Наша {4*болотная деревня} окружена отрядом {4*Тёмных Эльфов}.
+    Они запугали всех жителей и блокировали все пути в Данморе.
+>
+waitForUser
+talk.<
+    Если ты нам поможешь, мы будем тебе вечно благодарны.
+    Ты должна найти {4*путь} в деревню и прогнать всех {4*Тёмных Эльфов}.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Я не знаю, сколько мои друзья смогут продержаться в осаждённой деревне.
+    Пожалуйста, быстрее!
+>
+waitForUser
+changeWaypoint.6.5
+removeNpc"""
+InitScript = """
+setModel.g007s01m
+defaultWizForm.93.0.10
+movementSpeed.15"""
+UpdateScript = """
+label.0
+idle
+ifTriggerIsActive.9
+startPrelude
+endIf
+goto.0"""

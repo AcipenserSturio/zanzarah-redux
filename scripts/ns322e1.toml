@@ -1,0 +1,297 @@
+UID = "85E22024"
+Name = "AE987B81"
+TriggerScript = """
+playAnimation.13.-1
+setCamera.1000
+say.<Как приятно тебя видеть.>.0
+waitForUser
+ifPlayerHasCards.1.0.91
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+goto.0
+else
+goto.1
+label.0
+ifPlayerHasCards.1.2.58
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.92
+removePlayerCards.1.0.91
+exit
+else
+label.1
+ifPlayerHasCards.1.0.92
+goto.2
+else
+goto.3
+label.2
+ifPlayerHasCards.1.2.60
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.93
+removePlayerCards.1.0.92
+exit
+else
+label.3
+ifPlayerHasCards.1.0.93
+goto.4
+else
+goto.5
+label.4
+ifPlayerHasCards.1.2.187
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.94
+removePlayerCards.1.0.93
+exit
+else
+label.5
+ifPlayerHasCards.1.0.94
+goto.6
+else
+goto.7
+label.6
+ifPlayerHasCards.1.2.188
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.95
+removePlayerCards.1.0.94
+exit
+else
+label.7
+ifPlayerHasCards.1.0.95
+goto.8
+else
+goto.9
+label.8
+ifPlayerHasCards.1.2.189
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.96
+removePlayerCards.1.0.95
+exit
+else
+label.9
+ifPlayerHasCards.1.0.96
+goto.10
+else
+goto.11
+label.10
+ifPlayerHasCards.1.2.190
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.97
+removePlayerCards.1.0.96
+exit
+else
+label.11
+ifPlayerHasCards.1.0.97
+goto.12
+else
+goto.13
+label.12
+ifPlayerHasCards.1.2.191
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.98
+removePlayerCards.1.0.97
+exit
+else
+label.13
+ifPlayerHasCards.1.0.98
+goto.14
+else
+goto.15
+label.14
+ifPlayerHasCards.1.2.192
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.99
+removePlayerCards.1.0.98
+exit
+else
+label.15
+ifPlayerHasCards.1.0.99
+goto.16
+else
+goto.17
+label.16
+ifPlayerHasCards.1.2.59
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.100
+removePlayerCards.1.0.99
+exit
+else
+label.17
+ifPlayerHasCards.1.0.100
+goto.18
+else
+goto.19
+label.18
+ifPlayerHasCards.1.2.193
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.101
+removePlayerCards.1.0.100
+exit
+else
+label.19
+ifPlayerHasCards.1.0.101
+goto.20
+else
+goto.21
+label.20
+ifPlayerHasCards.1.2.194
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.102
+removePlayerCards.1.0.101
+exit
+else
+label.21
+ifPlayerHasCards.1.0.102
+goto.22
+else
+goto.23
+label.22
+ifPlayerHasCards.1.2.195
+setTalkLabels.-1.-1.0
+talk.<
+    Молодец, тебе удалось сделать нужную эволюцию Тайфола.
+    Дай свой элементаль, я добавлю в него новый камешек.
+>
+waitForUser
+givePlayerCards.1.0.103
+removePlayerCards.1.0.102
+exit
+else
+label.23
+ifPlayerHasCards.1.0.103
+goto.24
+else
+goto.25
+label.24
+ifPlayerHasCards.1.2.207
+setTalkLabels.-1.-1.0
+talk.<
+    Спектральная эволюция Тайнфола! Молодец, Эми, ты справилась.
+    Теперь я добавлю последний камешек в твой элементаль.
+    Надеюсь, тебе он поможет, как и прекрасные Тайнфолы.
+    Не забывай про старика Арнгрима.
+>
+waitForUser
+givePlayerCards.1.0.104
+removePlayerCards.1.0.103
+exit
+else
+label.25
+ifPlayerHasCards.1.0.104
+setTalkLabels.-1.-1.0
+talk.<
+    Как тебе эволюции Тайнфола в бою?
+    Считаю, Тайнфол просто великолепен как фея.
+    Всегда можно обратить его в нужную форму, если того захочешь.
+>
+waitForUser
+exit
+else
+setTalkLabels.-1.-1.0
+talk.<
+    У тебя нет необходимой эволюции Тайнфола.
+    Пока что я не могу пополнить элементаль.
+    Мой старый друг Нафни продавал Камни Природы, остальные либо поищи по Занзаре, либо сделай у каменщиков.
+>
+waitForUser
+exit"""
+InitScript = """
+setModel.d004s00m
+gotoRandomLabel.13.0
+label.0
+defaultWizForm.58.0.31
+goto.13
+label.1
+defaultWizForm.190.0.31
+goto.13
+label.2
+defaultWizForm.194.0.31
+goto.13
+label.3
+defaultWizForm.187.0.31
+goto.13
+label.4
+defaultWizForm.192.0.31
+goto.13
+label.5
+defaultWizForm.207.0.31
+goto.13
+label.6
+defaultWizForm.189.0.31
+goto.13
+label.7
+defaultWizForm.193.0.31
+goto.13
+label.8
+defaultWizForm.60.0.31
+goto.13
+label.9
+defaultWizForm.191.0.31
+goto.13
+label.10
+defaultWizForm.195.0.31
+goto.13
+label.11
+defaultWizForm.188.0.31
+goto.13
+label.12
+defaultWizForm.59.0.31
+goto.13
+label.13"""
+UpdateScript = "lookAtPlayer.-1.1"

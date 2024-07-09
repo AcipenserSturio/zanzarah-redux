@@ -1,0 +1,76 @@
+UID = "1F4D22A4"
+Name = "1C1716B1"
+TriggerScript = """
+setCamera.1002
+playAnimation.13.-1
+ifNpcModifierHasValue.1
+say.<О, Эми.>.0
+else
+say.<О, я так несчастен!>.0
+setNpcModifier.-1.-1.1
+endIf
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Я так несчастен! Я потерял свою любимую фею {4*Сегбуза} в поединке фей! Я не хочу принимать участие в турнире на {4*Большом Дереве} без него.
+>
+waitForUser
+talk.<
+    Некоторые Повелители фей считают фей Хаоса немного грубоватыми, Но я люблю своего {4* Сегбуза}.
+    У нее такие изящные крылья и милый носик.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Ты можешь продать только активную фею.
+    Если у тебя будет мой {4*Сегбуз}, сделай его своей {4*активной} феей.
+>
+waitForUser
+ifPlayerHasCards.1.0.26
+goto.10
+endIf
+ifPlayerHasCards.1.2.68
+setTalkLabels.-1.-1.0
+talk.<
+    Нет, это не мой Сегбуз.
+    Я не буду брать Сегбуза, который был получен с использованием злой магии.
+>
+waitForUser
+exit
+endIf
+exit
+label.10
+ifPlayerHasCards.1.2.68
+setTalkLabels.1.2.1
+talk.<
+    Моя фея! Ты нашла мою любимую фею {4*Сегбуза}! Пожалуйста, могу я ее забрать?
+    Взамен я дам тебе одну из своих фей.
+>
+waitForUser
+exit
+else
+exit
+endIf
+label.1
+setTalkLabels.-1.-1.0
+talk.<
+    Спасибо.
+    Теперь у меня есть {4*Сегбуз}, я смогу принять участие в турнире.
+    Спасибо, я собираюсь победить.
+    Вот, возьми эту редкую фею в знак моей благодарности.
+>
+waitForUser
+tradeWizform.217
+setCamera.3000
+changeWaypoint.1.2
+removeNpc
+exit
+label.2
+setTalkLabels.-1.-1.0
+talk.<О, я так несчастен!>
+waitForUser
+exit"""
+InitScript = """
+setModel.g203s23m
+defaultWizForm.217.0.10"""
+UpdateScript = "lookAtPlayer.-1.1"

@@ -1,0 +1,37 @@
+UID = "C598A334"
+Name = "2B4B0221"
+TriggerScript = """
+say.<Я везде тебя искал, Эмми.>.0
+waitForUser
+setTalkLabels.5.6.1
+talk.<Ты показала артефакт гномов мэру?>
+waitForUser
+label.5
+setTalkLabels.-1.-1.2
+talk.<
+    Нет сомнений в том, что гномы виновны.
+    Они объединились с {4*Тёмными Эльфами} против нас.
+>
+waitForUser
+label.6
+setTalkLabels.-1.-1.2
+talk.<Тогда ты должна это сделать.>
+waitForUser
+label.10
+setTalkLabels.-1.-1.2
+talk.<
+    Я организую турнир фей на {4*Большом Дереве}, на болоте.
+    Там мы определим лучшего Повелителя фей в Занзаре.
+>
+waitForUser
+talk.<
+    Нам срочно нужна лучшая помощь, которую этот мир может предложить.
+    Только лучшие Повелители фей будут участвовать в состязании на Большом Дереве на болоте.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Может, мы там встретимся?>
+waitForUser"""
+InitScript = """
+setModel.v000s00
+defaultWizForm.181.0.10"""

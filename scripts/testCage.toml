@@ -1,0 +1,10 @@
+UID = "F8F6E424"
+Name = "B18BDDB1"
+TriggerScript = """
+say.<К сожалению, этот ящик пуст!>.0
+waitForUser
+endActorEffect"""
+InitScript = """
+setModel.d000s00m
+startActorEffect.1"""
+UpdateScript = "lookAtPlayer.0.1"

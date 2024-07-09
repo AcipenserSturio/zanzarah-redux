@@ -1,0 +1,60 @@
+UID = "780C9704"
+Name = "2B4B0221"
+TriggerScript = """
+ifNpcModifierHasValue.0
+setNpcModifier.1032.2.1000
+setNpcModifier.-1.-1.1
+setCamera.3003
+delay.20
+exit
+endIf
+deployNpcAtTrigger.19.1
+setCamera.3003
+playAnimation.13.-1
+say.<Добро пожаловать в Эфир, Эми.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Ты нашла старую {4*арену Повелителей Фей}, Эми.
+    Тут встречались лучшие Повелители фей, чтобы выяснить в поединке, кто из них сильнее.
+>
+waitForUser
+talk.<
+    Они собирались со всей {4*Занзары}.
+    Гоблины приходили из болота, гномы с гор, а эльфы из темных лесов.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Но сейчас такая великолепная арена захвачена злым {4*Темным Эльфом}.
+    Дьявольские {4*Феи Тьмы} поддерживают его, самые сильные и опасные создания из глубин {4*Занзары}.
+    Будь осторожна, Эмми! 
+>
+waitForUser
+changeWaypoint.1.2
+changeWaypoint.2.3
+deployNpcAtTrigger.43.0
+changeDatabase.4C505E04
+exit"""
+InitScript = """
+setModel.v000s00
+defaultWizForm.181.0.10"""
+UpdateScript = """
+label.0
+lookAtPlayer.3.0
+ifNpcModifierHasValue.0
+goto.10
+else
+goto.11
+endIf
+goto.0
+label.10
+ifPlayerIsClose.1500
+startPrelude
+endIf
+goto.0
+label.11
+ifPlayerIsClose.10
+startPrelude
+endIf
+goto.0"""

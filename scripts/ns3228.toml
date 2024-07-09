@@ -1,0 +1,69 @@
+UID = "D7DF3704"
+Name = "20497DB1"
+TriggerScript = """
+ifPlayerHasCards.0.0.45
+setTalkLabels.-1.-1.0
+playAmyVoice.trg07e
+setCamera.1000
+changeWaypoint.-1.-1
+talk.<
+    Э-э-э! Ты не могла сюда попасть без нужного предмета...
+    Ахтунг, багоюзер! Вызываем багоубойную гвардию!
+>
+exit
+endIf
+setCamera.1000
+playAnimation.13.-1
+ifNpcModifierHasValue.0
+say.<Привет, чужестранец!>.0
+waitForUser
+goto.0
+else
+say.<
+    Этот поединок был достойным, но я проиграл.
+    Я дал тебе награду.
+    А пока что хочу побыть один и подумать.
+>.0
+waitForUser
+exit
+endIf
+label.0
+setTalkLabels.-1.-1.2
+talk.<
+    Разве здесь не прекрасно?
+    Я ранее работал в мэрии {4*Тиралина}, но так как я такой увлеченный коллекционер фей, я здесь чувствую себя счастливее.
+>
+waitForUser
+setTalkLabels.10.11.1
+talk.<
+    Я был в самых необычных местах, которое можно только представить в {4*Занзаре}.
+    Как тебе моя коллекция {4*фей Льда}?
+    Они делают меня непобедимым – попробуй, если хочешь ...
+>
+waitForUser
+label.10
+setCamera.1006
+fight.-1.-1
+exit
+label.11
+exit"""
+InitScript = """
+defaultWizForm.36.0.35
+defaultWizForm.149.1.40
+defaultWizForm.180.2.36
+defaultWizForm.199.3.30
+defaultWizForm.52.4.25
+setModel.g300s30m"""
+UpdateScript = "lookAtPlayer.0.1"
+DefeatedScript = """
+setCamera.1000
+setTalkLabels.-1.-1.0
+talk.<
+    Хм, силы {4*фей Льда} тоже ограничены...
+    Возьми этот {4*ключ}.
+    Он открывает дверь в {4*мэрии} {4*Тиралина}.
+    Боюсь, больше у меня нет ничего стоящего.
+>
+waitForUser
+givePlayerCards.1.0.27
+setNpcModifier.-1.-1.1"""

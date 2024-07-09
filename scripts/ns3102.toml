@@ -1,0 +1,67 @@
+UID = "56EA89B4"
+Name = "53AB7091"
+TriggerScript = """
+setCamera.3001
+ifPlayerHasCards.1.0.15
+say.<Добро пожаловать в мой магазин.>.0
+waitForUser
+label.0
+say.<С тех пор, как ты победила Тёмных Эльфов, в Данмор привозят много разных товаров.>.1
+choice.1.<Купить>
+choice.3.<Тайны болота>
+choice.2.<До встречи>
+waitForUser
+label.1
+tradingCurrency.C564B4A3
+tradingItem.5.23173793
+tradingItem.10.99D2B4A3
+tradingItem.15.AD58B4A3
+tradingItem.15.709DB4A3
+tradingItem.30.1889A2B3
+waitForUser
+goto.0
+label.3
+setTalkLabels.-1.-1.0
+talk.<
+    Глубоко в болоте ты найдешь много полезных {4*вещей}.
+    Но будь осторожна, в болоте много {4*препятствий} и {4*опасностей}!
+>
+waitForUser
+goto.0
+label.2
+exit
+endIf
+say.<
+    Ты, должно быть, тот человек о котором все говорят.
+    
+>.0
+waitForUser
+label.9
+say.<Я могу тебе продать необходимые предметы и дать совет.>.1
+choice.10.<Купить>
+choice.11.<Тайны болота>
+choice.12.<До встречи>
+waitForUser
+label.10
+tradingCurrency.C564B4A3
+tradingItem.10.23173793
+tradingItem.20.AD58B4A3
+tradingItem.50.709DB4A3
+waitForUser
+goto.9
+label.11
+setTalkLabels.-1.-1.0
+talk.<
+    Существуют слухи о спрятанной в болоте {4*Карте Природы}.
+    Но там легко заблудиться.
+    Иногда ты заметишь {4*пляшущие огоньки}.
+    Они могут привести  в интересные места.
+>
+waitForUser
+goto.9
+label.12
+exit"""
+InitScript = """
+setModel.g002s02m
+defaultWizForm.179.0.10"""
+UpdateScript = "lookAtPlayer.-1.1"

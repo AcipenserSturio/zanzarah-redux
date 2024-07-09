@@ -1,0 +1,46 @@
+UID = "4D925714"
+Name = "0E15A381"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<Привет, Эми, как дела?>.0
+waitForUser
+label.10
+say.<Что ты еще хочешь узнать?>.1
+choice.0.<Подвиги Белого Друида>
+choice.1.<Судьба Квинлина>
+choice.2.<До свидания>
+waitForUser
+label.0
+setTalkLabels.-1.-1.2
+talk.<
+    Давным-давно {4*Белый Друид} спас нас от людей.
+    Поэтому я уверен, что он поможет нам и в этот раз.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Ты должна помочь найти ему доказательства! Сам он не сможет найти преступника, виновного в этом несчастье.
+>
+waitForUser
+goto.10
+label.1
+setTalkLabels.-1.-1.2
+talk.<
+    Наш вождь, {4*Квинлин} исчез, как только тень  хаоса опустилась на {4*Занзару}.
+    Мы все о нем очень беспокоимся.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Сын Квинлина скитается по всей Занзаре в поисках отца.
+    Квинлин точно знает, кто отвечает за этот хаос.
+>
+waitForUser
+goto.10
+label.2
+exit"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.72.0.20"""
+UpdateScript = "lookAtPlayer.0.1"

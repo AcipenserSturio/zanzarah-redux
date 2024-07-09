@@ -1,0 +1,74 @@
+UID = "155FC724"
+Name = "B18BDDB1"
+TriggerScript = """
+ifPlayerHasCards.0.2.234
+say.<У тебя уже есть  фея!>.0
+waitForUser
+exit
+else
+setTalkLabels.-1.-1.2
+talk.<
+    Естественные феи обитают во всех областях Занзары.
+    К ним относятся феи Природы, Воздуха, Воды и Камня.
+    Большинство жителей Занзары предпочитает использовать именно их.
+>
+waitForUser
+setTalkLabels.10.11.1
+talk.<
+    Вы хотите взять себе эту фею?
+    Вы уверены, что именно эту, а не одну из двух других?
+    Руфус разрешил вам взять только одну из трёх!
+>
+waitForUser
+exit
+label.10
+ifNpcModifierHasValue.1
+removeWizForms
+tradeWizform.40
+endIf
+ifNpcModifierHasValue.2
+removeWizForms
+tradeWizform.158
+endIf
+ifNpcModifierHasValue.3
+removeWizForms
+tradeWizform.98
+endIf
+ifNpcModifierHasValue.0
+removeWizForms
+tradeWizform.18
+endIf
+setCamera.1006
+removeNpcAtTrigger.4
+removeNpcAtTrigger.5
+removeNpc
+exit
+label.11
+exit
+endIf"""
+InitScript = """
+ifNpcModifierHasValue.1
+setNpcType.3
+setCollision.0
+wizform.0.40.0
+exit
+endIf
+ifNpcModifierHasValue.2
+setNpcType.3
+setCollision.0
+wizform.0.158.0
+exit
+endIf
+ifNpcModifierHasValue.3
+setNpcType.3
+setCollision.0
+wizform.0.98.0
+exit
+endIf
+ifNpcModifierHasValue.0
+setNpcType.3
+setCollision.0
+wizform.0.18.0
+exit
+endIf"""
+UpdateScript = "lookAtPlayer.0.0"

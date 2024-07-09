@@ -1,0 +1,50 @@
+UID = "9FB22894"
+Name = "3EFC8691"
+TriggerScript = """
+setCamera.1000
+playAnimation.12.-1
+say.<...>.0
+waitForUser
+gotoRandomLabel.2.5
+label.5
+setTalkLabels.1.2.1
+talk.<
+    Так или иначе, я буду вечно ждать, что на болоте произойдет что-то хорошее, но вместо этого вокруг бродят Тёмные Эльфы.
+    Я уверена, что в {4*мире людей} всё по-другому.
+>
+waitForUser
+label.6
+setTalkLabels.1.2.1
+talk.<
+    Погода на болотах делает меня меланхоличной.
+    А теперь здесь еще и {4*Тёмные Эльфы}.
+    Ваш {4*человеческий мир} должен быть намного лучше нашего, не так ли?
+>
+waitForUser
+label.1
+setTalkLabels.-1.-1.0
+talk.<
+    Хотела бы я быть человеком! Тогда бы у меня были такие же, как у тебя, приключения, и я путешествовала бы по миру.
+>
+waitForUser
+exit
+label.2
+setTalkLabels.-1.-1.0
+talk.<
+    {4*Мир людей} скучный?
+    Я не верю в это.
+>
+waitForUser
+exit"""
+InitScript = """
+setModel.g003s03m
+defaultWizForm.77.0.10"""
+UpdateScript = """
+label.0
+idle
+moveSystem.1.3
+gotoRandomLabel.2.0
+goto.0
+label.1
+playAnimation.0.90
+goto.0"""

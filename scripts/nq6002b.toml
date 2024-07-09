@@ -1,0 +1,42 @@
+UID = "E3A72994"
+Name = "F655D391"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+ifNpcModifierHasValue.0
+say.<Это не тебя я встречал в болотной деревне?>.0
+else
+say.<Эмми, рад тебя видеть.>.0
+endIf
+waitForUser
+ifNpcModifierHasValue.0
+setNpcModifier.-1.-1.1
+setTalkLabels.-1.-1.2
+talk.<Я никогда не забуду, как ты очистила нашу долину от терновых кустов.>
+waitForUser
+endIf
+setTalkLabels.0.1.1
+talk.<
+    В знак моей благодарности я превращу {4*два} средних флакона бальзама в один особый.
+    Согласна?
+>
+waitForUser
+label.1
+exit
+label.0
+setTalkLabels.-1.-1.0
+ifPlayerHasCards.2.0.0
+removePlayerCards.2.0.0
+talk.<Было приятно!>
+waitForUser
+givePlayerCards.1.0.5
+exit
+else
+talk.<Пожалуйста, принеси мне два средних флаконов бальзама, иначе я не смогу тебе помочь!>
+waitForUser
+exit
+endIf"""
+InitScript = """
+setModel.w001s01m
+defaultWizForm.192.0.60"""
+UpdateScript = "lookAtPlayer.0.1"

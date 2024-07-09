@@ -1,0 +1,57 @@
+UID = "C5B14EB4"
+Name = "2604EC91"
+TriggerScript = """
+setCamera.1000
+say.<Добро пожаловать в самый большой в Занзаре магазин волшебных снадобий.>.0
+waitForUser
+label.10
+say.<Я предлагаю лучший товар по низким ценам.>.1
+choice.0.<У меня есть {4*Руна Болота}, хотите купить  за {4*пять кристаллов}?>
+choice.1.<Хотите еще что-нибудь купить?>
+choice.2.<До встречи.>
+waitForUser
+label.0
+ifPlayerHasCards.5.0.6
+removePlayerCards.5.0.6
+setTalkLabels.-1.-1.2
+talk.<
+    Спасибо за пять кристаллов.
+    Ты достаточно умна для человеческой девушки.
+    Вот, возьми {4*руну} и правильно ее используй.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Говорят, {4*руны} открывают прямой путь в различные области {4*Занзары}.
+    Эта {4*Руна Болота} приведет тебя в болотную деревню.
+    Я получила ее давным-давно от одного Болотного Гоблина.
+>
+waitForUser
+givePlayerCards.1.0.31
+changeDatabase.6933B394
+exit
+else
+setTalkLabels.-1.-1.0
+talk.<
+    Пока у тебя нет {4*пяти кристаллов},я не могу отдать {4*руну}.
+    Это очень ценный камень, который приведет тебя в {4*Данмор}.
+>
+waitForUser
+goto.10
+endIf
+label.1
+tradingCurrency.C564B4A3
+tradingItem.5.23173793
+tradingItem.10.99D2B4A3
+tradingItem.20.AD58B4A3
+tradingItem.20.709DB4A3
+tradingItem.25.2E2FB8A3
+waitForUser
+goto.10
+exit
+label.2
+exit"""
+InitScript = """
+setModel.g201s21m
+wizform.0.68.40"""
+UpdateScript = "lookAtPlayer.-1.1"

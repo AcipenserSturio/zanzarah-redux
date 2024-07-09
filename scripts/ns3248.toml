@@ -1,0 +1,30 @@
+UID = "6BDF2114"
+Name = "4A8F6A21"
+TriggerScript = """
+playSound.3
+say.<Кто меня беспокоит?>.0
+setCamera.1000
+waitForUser
+talk.<
+    Человек пришёл сюда, пока я всплываю?
+    Если победишь меня и других демонов глубин, я буду служить тебе!
+>
+waitForUser
+fight.-1.0"""
+InitScript = """
+setNpcType.3
+defaultWizForm.80.0.61
+defaultWizForm.25.1.61
+defaultWizForm.180.2.61
+defaultWizForm.25.3.61
+defaultWizForm.180.4.61"""
+DefeatedScript = """
+talk.<
+    Ты победила меня?
+    Я хозяин своих слов, так что командуй, хозяйка.
+>
+givePlayerCards.1.2.80
+waitForUser
+createDynamicItems.4.5.-1
+startEffect.1.-1
+removeNpc"""

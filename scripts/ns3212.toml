@@ -1,0 +1,92 @@
+UID = "D7A1C7B4"
+Name = "61D83591"
+TriggerScript = """
+playAnimation.13.-1
+setCamera.1000
+ifNpcModifierHasValue.1
+say.<
+    Привет, человек.
+    Надеюсь, что моей {4*фее } хорошо у тебя.
+>.0
+setTalkLabels.-1.-1.0
+talk.<
+    Привет, человек.
+    Надеюсь, что моей {4*фее } хорошо у тебя.
+>
+waitForUser
+exit
+endIf
+say.<
+    Ух ты! Человек, за которым идут феи.
+    Это странно.
+>.0
+waitForUser
+setTalkLabels.0.1.1
+talk.<
+    Как видишь у меня есть несколько редких фей.
+    Я бы обменял одну из них на прекрасную Лайану, красу Природы.
+    Ты согласна на обмен?
+>
+waitForUser
+say.<
+    Замечательно! Вот, возьми мою фею!
+>.0
+choice.7.<Голбат (фея Тьмы)>
+choice.8.<Виндоу (фея Воздуха)>
+choice.9.<Сайэйн (Сай-фея)>
+choice.6.<Клаудия (фея Воздуха)>
+waitForUser
+exit
+endIf
+label.7
+setTalkLabels.-1.-1.0
+ifPlayerHasCards.1.2.76
+talk.<Это была прекрасная сделка - я наконец-то получил фею своей мечты.>
+waitForUser
+removeWizForms
+tradeWizform.93
+setNpcModifier.-1.-1.1
+exit
+endIf
+label.6
+setTalkLabels.-1.-1.0
+ifPlayerHasCards.1.2.76
+talk.<Это была прекрасная сделка - я наконец-то получил фею своей мечты.>
+waitForUser
+removeWizForms
+tradeWizform.79
+setNpcModifier.-1.-1.1
+exit
+endIf
+label.8
+setTalkLabels.-1.-1.0
+ifPlayerHasCards.1.2.76
+talk.<Это была прекрасная сделка - я наконец-то получил фею своей мечты.>
+waitForUser
+removeWizForms
+tradeWizform.143
+setNpcModifier.-1.-1.1
+exit
+endIf
+label.9
+setTalkLabels.-1.-1.0
+ifPlayerHasCards.1.2.76
+talk.<Это была прекрасная сделка - я наконец-то получил фею своей мечты.>
+waitForUser
+removeWizForms
+tradeWizform.154
+setNpcModifier.-1.-1.1
+exit
+else
+talk.<Как жалко, что у тебя нет Лайаны.>
+waitForUser
+endIf
+label.1
+exit"""
+InitScript = """
+setModel.g301s31m
+movementSpeed.14
+ifNpcModifierHasValue.0
+defaultWizForm.61.0.9
+endIf"""
+UpdateScript = "lookAtPlayer.0.1"

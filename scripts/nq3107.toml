@@ -1,0 +1,76 @@
+UID = "33D0C584"
+Name = "09E2F581"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+ifNpcModifierHasValue.1
+goto.0
+endIf
+ifPlayerHasCards.1.0.22
+setNpcModifier.-1.-1.1
+say.<О тебе ходят различные легенды, Эми.>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Ты освободила потерявшегося {4*Гнома - Мастера}?
+    Значит, доказана невиновность гномов, и я снова могу продавать кристаллы.
+>
+waitForUser
+goto.0
+endIf
+ifPlayerHasCards.1.0.26
+goto.10
+endIf
+say.<Заходи.>.0
+waitForUser
+label.0
+say.<Я меняю кристаллы на эльфийские монеты.>.1
+choice.6.<Купить 1 кристалл за 10 монет>
+choice.5.<Продать 1 кристалл за 5 монет>
+choice.7.<Нет>
+waitForUser
+label.5
+ifPlayerHasCards.1.0.6
+setTalkLabels.-1.-1.0
+talk.<Сделка есть сделка.>
+waitForUser
+removePlayerCards.1.0.6
+givePlayerCards.5.0.4
+exit
+endIf
+setTalkLabels.-1.-1.0
+talk.<У тебя нет ни единого кристалла, ты не получишь от меня  монет!>
+waitForUser
+goto.0
+label.6
+ifPlayerHasCards.10.0.4
+setTalkLabels.-1.-1.0
+talk.<Сделка есть сделка.>
+waitForUser
+removePlayerCards.10.0.4
+givePlayerCards.1.0.6
+exit
+endIf
+setTalkLabels.-1.-1.0
+talk.<Если у тебя недостаточно монет, я не буду иметь с тобой дело.>
+waitForUser
+goto.0
+label.7
+exit
+label.10
+say.<Привет, Эми.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<С тех пор как найден {4*Посох Квинлина}, многие в {4*Занзаре} верят, что гномы сообщники Тёмных Эльфов.>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Поэтому мой магазин закрыт.
+    Я не могу продавать кристаллы, пока не будет доказана наша невиновность.
+>
+waitForUser
+exit"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.163.0.10"""
+UpdateScript = "lookAtPlayer.-1.1"

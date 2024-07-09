@@ -1,0 +1,87 @@
+UID = "8C136A14"
+Name = "6A27F581"
+TriggerScript = """
+setCamera.3000
+playAnimation.13.-1
+ifNpcModifierHasValue.1
+say.<О, опять ты!>.0
+waitForUser
+setTalkLabels.10.11.1
+talk.<Ты хочешь сейчас сразиться с моими феями?>
+waitForUser
+exit
+endIf
+setNpcModifier.-1.-1.1
+say.<
+    Что?
+    Люди в Занзаре?
+    Это зло когда-нибудь закончится?
+>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Вся земля идет прахом! Вход в наш любимый дом, {4*Монагам}, закрыт огромным валуном.
+    Гном {4*Квинлин} исчез, а ужасные {4*Тёмные Эльфы} бродят по горам.
+>
+waitForUser
+talk.<
+    Двое из них даже пытались попасть в нашу башню.
+    Один был довольно благородным, а другой нервным и хитрым.
+    Я и мои братья храним {4*Ключ Земли}!
+>
+waitForUser
+talk.<Только объединив этот ключ с потерянными стихийными ключами {4*Воздуха} и {4*Природы}, ты сможешь привести в действие старый лифт и попасть в Эфир.>
+waitForUser
+setTalkLabels.10.11.1
+talk.<
+    Но с тех пор как мы охраняем башню, ты должна победить каждого из нас в {4*поединке фей}, чтобы получить ключ.
+    Не хочешь попробовать?
+>
+waitForUser
+exit
+label.10
+setCamera.1006
+fight.-1.0
+label.11
+setTalkLabels.-1.-1.0
+talk.<Хвала Друиду, а ведь я далеко не самый сильный Повелитель фей.>
+waitForUser
+exit"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.46.0.27
+defaultWizForm.48.1.28
+defaultWizForm.47.2.27
+defaultWizForm.49.3.31
+defaultWizForm.154.4.29
+spell.0.0.37
+spell.0.1.89
+spell.0.2.160
+spell.0.3.85
+spell.1.0.0
+spell.1.1.88
+spell.1.2.29
+spell.1.3.85
+spell.2.0.w6
+spell.2.1.89
+spell.2.2.160
+spell.2.3.85
+spell.3.0.161
+spell.3.1.89
+spell.3.2.160
+spell.3.3.88"""
+UpdateScript = "lookAtPlayer.0.1"
+DefeatedScript = """
+setTalkLabels.-1.-1.0
+setCamera.3000
+talk.<
+    Ладно, ты меня победила.
+    Хм, но ты никогда не победишь моих трёх братьев.
+    Если будет время, приходи ко мне.
+    Я достаточно много могу рассказать.
+>
+waitForUser
+changeWaypoint.-1.0
+changeWaypoint.0.1
+removeNpc"""
+VictoriousScript = "killPlayer"

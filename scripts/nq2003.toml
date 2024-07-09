@@ -1,0 +1,27 @@
+UID = "398C4694"
+Name = "970E3A91"
+TriggerScript = """
+ifNumberOfNpcsIs.0.75ed2a94
+setTalkLabels.-1.-1.0
+talk.<Этот ужасный {4*пикси} действительно исчез из моего магазина?>
+waitForUser
+setCamera.3001
+changeWaypoint.-1.2
+talk.<Спасибо, что ты его поймала, теперь я снова смогу открыть магазин.>
+waitForUser
+changeDatabase.B9D44694
+exit
+endIf
+say.<Помогите!>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Я {4*ненавижу} пикси.
+    Пока эта тварь не прекратит бушевать в моем магазине, я не продам ни одного магического предмета.
+>
+waitForUser
+exit"""
+InitScript = """
+setModel.g200s20m
+defaultWizForm.28.0.10"""
+UpdateScript = "lookAtPlayer.0.1"

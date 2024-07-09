@@ -1,0 +1,70 @@
+UID = "05147314"
+Name = "93D1E691"
+TriggerScript = """
+setTalkLabels.-1.-1.0
+ifPlayerHasCards.1.0.22
+say.<О, Эми!>.0
+waitForUser
+talk.<
+    Ты доказала невиновность {4*Квинлина}! Я тебе благодарна.
+    Надеюсь, он ещё придет сюда.
+>
+waitForUser
+exit
+endIf
+ifNpcModifierHasValue.1
+goto.10
+endIf
+ifPlayerHasCards.1.0.44
+label.10
+say.<О, это ты.>.0
+waitForUser
+talk.<
+    Не верь сплетням о {4*Квинлине}! Он порядочный, мудрый гном.
+>
+waitForUser
+exit
+endIf
+setCamera.3000
+playAnimation.13.-1
+say.<Человеческая девушка стала Повелительницей фей?>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Я не верю, что {4*Квинлин} предатель.
+    Он часто приходил сюда, и я хорошо его знаю.
+    Он никогда бы не предал нас!
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Если тебе нужна {4*Карта Воздуха}, то сначала тебе придется как-то пройти мимо меня!>
+waitForUser
+fight.-1.0
+exit"""
+InitScript = """
+setModel.g004s03m
+defaultWizForm.81.0.35
+defaultWizForm.192.1.40
+defaultWizForm.97.2.30
+defaultWizForm.73.3.35
+defaultWizForm.100.4.37"""
+UpdateScript = """
+ifNpcModifierHasValue.1
+lookAtPlayer.0.1
+endIf
+label.0
+lookAtPlayer.1.1
+ifPlayerIsClose.2
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.1000
+setTalkLabels.-1.-1.0
+talk.<
+    Ох, бедный {4*Квинлин}.
+    Достань карту, она на верхушке дерева.
+    Но не верь в эти злые сплетни!!
+>
+waitForUser
+setNpcModifier.-1.-1.1"""

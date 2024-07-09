@@ -1,0 +1,30 @@
+UID = "9A299BA4"
+Name = "8A0B7EB1"
+TriggerScript = """
+setCamera.1005
+playAnimation.13.-1
+gotoRandomLabel.2.10
+label.10
+say.<Тебе всегда рады.>.0
+goto.12
+label.11
+say.<Добро пожаловать, Эмми!>.0
+label.12
+waitForUser
+setTalkLabels.-1.-1.0
+ifNpcModifierHasValue.1
+talk.<Пока я здесь стою, {4*пикси} не убегут.>
+else
+talk.<
+    Спасибо, что помогла поймать пикси.
+    Сиамус занимался непонятно чем, Дариус слишком юн и неопытен, а моя любимая девочка давно переселилась в Морион.
+    Помощи ждать было неоткуда.
+>
+setNpcModifier.-1.-1.1
+endIf
+waitForUser"""
+InitScript = """
+setModel.g207s23m
+movementSpeed.13
+wizform.1.1.2"""
+UpdateScript = "lookAtPlayer.0.1"

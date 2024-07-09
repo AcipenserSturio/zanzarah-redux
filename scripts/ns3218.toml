@@ -1,0 +1,65 @@
+UID = "B8F89614"
+Name = "F8438821"
+TriggerScript = """
+ifPlayerHasCards.0.0.22
+setTalkLabels.-1.-1.0
+playAmyVoice.trg07e
+setCamera.1000
+changeWaypoint.-1.-1
+talk.<
+    Э-э-э! Ты не могла сюда попасть без нужного предмета...
+    Ахтунг, багоюзер! Вызываем багоубойную гвардию!
+>
+exit
+endIf
+deployNpcAtTrigger.64.1
+playAnimation.13.-1
+setCamera.3000
+say.<Существо из мира людей!>.0
+waitForUser
+setCamera.1000
+givePlayerCards.0.86.0
+talk.<Ты все еще такая жалкая и несчастная, ха-ха!>
+waitForUser
+fight.-1.-1
+else
+goto.10
+endIf
+exit
+label.10
+ifNpcModifierHasValue.1
+talk.<Мне плевать, где ты достанешь эту деталь, хоть у гномов, но я не подумаю пропустить тебя без её наличия, жалкий человек!>
+else
+talk.<
+    Думаешь, можешь спокойно пройти через Пустомирье и уничтожить Стража?
+    Тебе придётся пройти через меня.
+    А я даже не подумаю сражаться, пока ты не достанешь деталь мехатроника!
+>
+setNpcModifier.-1.-1.1
+endIf
+waitForUser"""
+InitScript = """
+setModel.u001s01m
+defaultWizForm.25.0.61
+defaultWizForm.45.1.61
+defaultWizForm.5.2.61
+defaultWizForm.167.3.61
+defaultWizForm.108.4.61"""
+UpdateScript = """
+label.0
+lookAtPlayer.1.1
+ifTriggerIsActive.63
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+removeWizForms
+setCamera.1000
+talk.<
+    Не может такого быть! Ты победила меня – противный человек победил меня?! Я отступаю, но ещё не всё потеряно.
+    Мы ещё отыграемся.
+>
+waitForUser
+delay.10
+startEffect.0.-1
+removeNpc"""

@@ -1,0 +1,48 @@
+UID = "4D105FA4"
+Name = "23C01791"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<
+    Привет.
+    Надеюсь, ты достойная жертва.
+>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Я ищу подходящего игрока.
+    Правила очень просты: Доска представляет собой игровое поле размером 5x5, и ты должна попытаться дойти своими 5 фишками до противоположной стороны.
+>
+waitForUser
+setTalkLabels.0.1.1
+talk.<
+    Ты можешь начать всего лишь за {4*10 монет}.
+    Если победишь, получишь награду! Хочешь сыграть?
+>
+waitForUser
+label.0
+ifPlayerHasCards.10.0.4
+removePlayerCards.10.0.4
+subGame.1.2.10
+waitForUser
+else
+setTalkLabels.-1.-1.0
+talk.<Жаль, но у тебя недостаточно денег!>
+waitForUser
+endIf
+label.1
+exit
+label.10
+setTalkLabels.-1.-1.0
+talk.<
+    Неплохо.
+    Ты выиграла раунд!
+>
+waitForUser
+playSound.0
+givePlayerCards.20.0.4
+exit"""
+InitScript = """
+setModel.g300s30m
+defaultWizForm.150.0.10"""
+UpdateScript = "lookAtPlayer.0.1"

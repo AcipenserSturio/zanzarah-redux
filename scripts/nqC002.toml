@@ -1,0 +1,59 @@
+UID = "8C12D134"
+Name = "389D7EB1"
+TriggerScript = """
+deployNpcAtTrigger.56.1
+setCamera.3001
+playAnimation.13.-1
+say.<Повелительница фей из человеческого мира.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Помнишь меня?
+    Я {4*Эйрик}, гном из {4*Тиралина}.
+    Теперь, когда ты нашла {4*Посох Квинлина}, все поверят, что мы, гномы, заключили союз с {4*Тёмными Эльфами}.
+    Но я бы никогда не стал доверять им, даже тем, с которыми мы вместе живём в Тиралине.
+>
+waitForUser
+setTalkLabels.10.11.1
+talk.<
+    Я выиграю турнир и докажу, что мы не виноваты! Ты готова к честному поединку?
+>
+waitForUser
+label.10
+setCamera.1006
+fight.-1.0
+exit
+label.11
+setTalkLabels.-1.-1.0
+talk.<Это облегчит мне получение {4*Карты Воздуха}.>
+waitForUser
+exit"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.45.0.36
+defaultWizForm.36.1.42
+defaultWizForm.8.2.40
+defaultWizForm.145.3.42
+defaultWizForm.70.4.38"""
+UpdateScript = """
+label.0
+lookAtPlayer.2.1
+ifPlayerIsClose.4
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.3001
+playAnimation.13.-1
+setTalkLabels.-1.-1.0
+talk.<
+    Я проиграл.
+    Эми, я очень надеюсь, что ты сможешь найти правду и доказать то, что мы никогда не играли с силами Тьмы.
+>
+waitForUser
+changeWaypoint.7.6
+changeWaypoint.6.5
+changeWaypoint.5.4
+changeWaypoint.4.3
+removeNpc"""
+VictoriousScript = "killPlayer"

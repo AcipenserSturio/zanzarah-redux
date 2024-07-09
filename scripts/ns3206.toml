@@ -1,0 +1,24 @@
+UID = "9171CF24"
+Name = "B18BDDB1"
+TriggerScript = """
+setCamera.1000
+say.<Человек?!>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Может ты поможешь...
+    Видишь этот воздушный вихрь?
+>
+waitForUser
+setCamera.3101
+delay.20
+setCamera.1006
+talk.<Я долгие годы  пытался использовать это явление природы, но очевидно эта стихия не для меня...>
+waitForUser
+setCamera.1000
+setTalkLabels.-1.-1.0
+talk.<Дай мне знать, как только раскроешь тайну этих потоков!>
+waitForUser
+startEffect.1.-1
+removeNpc"""
+InitScript = "wizform.0.3.1"

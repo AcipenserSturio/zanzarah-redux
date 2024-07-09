@@ -1,0 +1,108 @@
+UID = "E1094DB4"
+Name = "E95016B1"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+ifNpcModifierHasValue.0
+goto.20
+endIf
+ifNumberOfNpcsIs.4.902391A4
+say.<Привет, Эмми!>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<В пещере ещё {4*четыре} опасных феи.>
+waitForUser
+exit
+endIf
+ifNumberOfNpcsIs.3.902391A4
+say.<Привет, Эмми!>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Тебе нужно найти еще {4*трёх} диких фей в пещере, Эмми.>
+waitForUser
+exit
+endIf
+ifNumberOfNpcsIs.2.902391A4
+say.<Привет, Эмми!>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Ещё{4*двух} фей необходимо найти и выгнать, и тогда я смогу уйти из пещеры.>
+waitForUser
+exit
+endIf
+ifNumberOfNpcsIs.1.902391A4
+say.<Привет, Эмми!>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Ты можешь это сделать, Эмми.
+    Всего {4*одна} фея – и тогда я смогу добраться до выхода невредимым.
+>
+waitForUser
+exit
+endIf
+ifNumberOfNpcsIs.0.902391A4
+goto.10
+endIf
+label.20
+setNpcModifier.-1.-1.1
+ifNumberOfNpcsIs.0.902391A4
+goto.10
+endIf
+say.<Я так рад тебя видеть, Эмми!>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Я всё ещё ищу своего отца {4*Квинлина}, Гнома - Мастера.
+    Но у меня ничего  не получается, и я в отчаянии.
+>
+waitForUser
+talk.<
+    Я не смог найти его следов ни в лесах, ни в болотах {4*Занзары}.
+    Я шел по горам и застрял в этой ужасной пещере.
+>
+waitForUser
+talk.<
+    Здесь кругом злобные дикие {4*феи}.
+    Я заперт здесь, в этих сырых пещерах, уже несколько дней, а я ненавижу холод.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Я буду тебе вечно благодарен, если ты сможешь найти всех фей и выгнать их отсюда.
+    Будь осторожна, они могут прятаться в любом углу этой {4*сырой} пещеры.
+>
+waitForUser
+exit
+label.10
+deployNpcAtTrigger.82.1
+setCamera.3001
+playAnimation.13.-1
+say.<Ты сделала это, Эмми!>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Ты нашла всех {4*четырёх} диких фей в этой пещере и выгнала их.
+    Ты умница!
+>
+waitForUser
+talk.<
+    Наконец, я могу покинуть эту холодную могилу.
+    Возьми этот ценный {4*Стихийный Ключ Воздуха} в знак моей благодарности.
+    Я нашел эту старую реликвию гномов, когда бродил по пещерам.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Теперь я могу продолжить поиски отца.
+    Где-то же он должен быть! До встречи, Эмми.
+>
+waitForUser
+givePlayerCards.1.0.55
+changeWaypoint.1.2
+changeWaypoint.2.3
+removeNpc"""
+InitScript = """
+setModel.d006s02m
+defaultWizForm.55.0.10"""
+UpdateScript = "lookAtPlayer.0.1"

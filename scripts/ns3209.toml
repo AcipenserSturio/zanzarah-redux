@@ -1,0 +1,59 @@
+UID = "E7D47224"
+Name = "6C519B81"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+gotoRandomLabel.2.10
+label.10
+say.<Нежданный гость!>.0
+goto.12
+label.11
+say.<Добро пожаловать, Эми.>.0
+label.12
+waitForUser
+ifPlayerHasCards.1.0.54
+setTalkLabels.-1.-1.0
+talk.<
+    Вижу, у тебя теперь есть {4*Стихийный Ключ Огня}.
+    Вряд ли я могу тебе еще чем-нибудь помочь.
+>
+waitForUser
+exit
+endIf
+ifPlayerHasCards.1.0.70
+goto.20
+else
+setTalkLabels.-1.-1.2
+talk.<
+    Я охраняю доступ к {4*Стихийному Ключу Огня}.
+    Я готов помочь тебе взять его, но сначала ты должна доказать, что точно являешься другом нашего народа.
+    
+>
+waitForUser
+talk.<Давным-давно, когда мы, гномы, все еще создавали самые лучшие и мощные машины во всей {4*Занзаре}, мы пользовались специальными {4*инструментами}.>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Найди эти инструменты и покажи мне.
+    Это будет доказательством того, что ты достойна наших сокровищ!
+>
+waitForUser
+exit
+endIf
+label.20
+setTalkLabels.-1.-1.0
+ifNpcModifierHasValue.0
+talk.<О, у тебя {4*инструменты}, минутку...>
+waitForUser
+setNpcModifier.-1.-1.1
+setCamera.3000
+else
+talk.<Я помогу тебе...>
+waitForUser
+endIf
+createSceneObjects.0
+exit"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.119.0.10"""
+UpdateScript = "lookAtPlayer.0.1"

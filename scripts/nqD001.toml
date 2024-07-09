@@ -1,0 +1,52 @@
+UID = "DA3243A4"
+Name = "E95016B1"
+TriggerScript = """
+setCamera.1002
+playAnimation.13.-1
+ifPlayerHasCards.1.0.25
+say.<Не верь Друиду!>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    У тебя есть ключ от {4*старой фабрики}.
+    Иди в деревню гномов {4*Монагам} и узнай правду.
+>
+waitForUser
+exit
+endIf
+ifPlayerHasSpecials.3.2
+say.<Эмми, помоги мне!>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Не верь ни единому слову Друида! Гномы никогда не воруют! Я искал лишь намек на то, где искать своего отца, {4*Квинлина}.
+>
+waitForUser
+setCamera.2003
+talk.<
+    Потом я нашел этот  старый {4*гномский ключ}.
+    Это ключ от {4*фабрики} в {4*Монагаме}.
+    Воспользуйся им.
+    Это единственное место, где ты можешь узнать, что случилось с  {4*Занзарой}.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Не позволяй авторитету {4*Друида} ослепить тебя.
+    Иди в {4*Монагам}!
+>
+waitForUser
+setCamera.1006
+givePlayerCards.1.0.25
+exit
+endIf
+playVideo.18
+setTalkLabels.-1.-1.0
+setCamera.1000
+changeWaypoint.-1.-1
+exit
+endIf"""
+InitScript = """
+setModel.d006s02m
+startActorEffect.1"""
+UpdateScript = "lookAtPlayer.-1.1"

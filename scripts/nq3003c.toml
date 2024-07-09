@@ -1,0 +1,50 @@
+UID = "72861934"
+Name = "F56DC381"
+TriggerScript = """
+playAnimation.13.-1
+setCamera.1000
+ifPlayerHasCards.1.0.22
+say.<Ты спасла нашего пропавшего вождя!>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Как Друид мог похитить Квинлина?
+    Ты должна расстроить темные планы Друида и уничтожить его {4*Стража}.
+>
+waitForUser
+goto.0
+endIf
+say.<Привет, Эмми, Я всегда рад видеть таких как ты.>.0
+waitForUser
+label.0
+setTalkLabels.1.2.1
+talk.<
+    Тебе еще нужны кристаллы?
+    Я продам тебе последний кристалл за {4*десять монет}.
+>
+waitForUser
+label.1
+ifPlayerHasCards.10.0.4
+removePlayerCards.10.0.4
+setTalkLabels.-1.-1.0
+talk.<
+    Ты купила у меня мой  {4*последний кристалл}.
+    С тобой приятно иметь дело.
+>
+waitForUser
+givePlayerCards.1.0.6
+changeDatabase.837B7934
+exit
+endIf
+setTalkLabels.-1.-1.0
+talk.<
+    Нет уж! У тебя нет {4*десяти монет}!
+>
+waitForUser
+exit
+label.2
+exit"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.11.0.10"""
+UpdateScript = "lookAtPlayer.-1.1"

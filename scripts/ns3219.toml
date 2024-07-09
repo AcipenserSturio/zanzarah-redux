@@ -1,0 +1,81 @@
+UID = "11428094"
+Name = "44EB3001"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<Снова приветствую тебя!>.0
+waitForUser
+changeWaypoint.-1.-1
+talk.<
+    Я и мой офицер остались последними, кто может оказать тебе какое-то сопротивление.
+    Ты не сможешь вырваться от нас, и наши феи справятся с твоими.
+    Только так мы сможем завершить сделку с Друидом.
+>
+waitForUser
+setCamera.3000
+deployNpcAtTrigger.82.6eceda24
+startEffect.0.82
+delay.10
+playSound.5
+setCamera.3001
+delay.10
+playSound.5
+setCamera.3002
+delay.10
+playSound.5
+setCamera.3003
+delay.10
+playSound.5
+fight.-1.1"""
+InitScript = """
+setModel.u000s00m
+defaultWizForm.11.0.61
+defaultWizForm.131.1.61
+defaultWizForm.171.2.61
+defaultWizForm.186.3.61
+defaultWizForm.22.4.61"""
+UpdateScript = """
+label.0
+lookAtPlayer.1.1
+ifPlayerIsClose.15
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+talk.<
+    Мы не можем остановить тебя, ты слишком сильна.
+    Но Друид точно справится.
+    Было приятно сражаться с тобой.
+>
+waitForUser
+removeNpcAtTrigger.81
+delay.10
+startEffect.0.87
+delay.1
+setCamera.3001
+startEffect.0.88
+delay.1
+startEffect.1.89
+delay.1
+setCamera.3000
+startEffect.1.90
+delay.1
+startEffect.0.88
+delay.1
+startEffect.0.91
+delay.1
+setCamera.3003
+startEffect.1.91
+delay.1
+startEffect.0.87
+delay.1
+setCamera.3002
+startEffect.1.92
+delay.1
+startEffect.1.89
+delay.1
+startEffect.1.90
+delay.1
+startEffect.0.88
+delay.1
+removeNpc"""

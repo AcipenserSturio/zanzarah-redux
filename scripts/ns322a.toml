@@ -1,0 +1,55 @@
+UID = "EDF3CF24"
+Name = "3C54F691"
+TriggerScript = """
+ifPlayerHasSpecials.3.2
+setCamera.1000
+playAnimation.13.-1
+say.<Ага, вот, наконец, ты пришла ко мне.>.0
+waitForUser
+changeWaypoint.-1.-1
+setTalkLabels.-1.-1.2
+talk.<
+    Я тебя давно жду.
+    Меня отправил мой брат, Нхестад, сюда, чтобы раз и навсегда закончить твое путешествие.
+    
+>
+waitForUser
+talk.<Не подумай, что мне это нравится – я ненавижу эту головокружительную высоту и постоянный яркий свет, хоть и устойчив к нему, а также этого диктатора Рагмаша и его тайного куратора.>
+waitForUser
+talk.<Что ж, начнем битву, я должен сбежать уже из армии и вернуться к нормальной.>
+waitForUser
+setCamera.3005
+fight.-1.-1
+killPlayer
+setCamera.1000
+changeWaypoint.-1.-1
+talk.<Do you want to eat or drink?>
+exit
+endIf"""
+InitScript = """
+defaultWizForm.162.0.46
+defaultWizForm.79.1.50
+defaultWizForm.54.2.46
+defaultWizForm.100.3.50
+defaultWizForm.96.4.40
+setModel.u008s22m"""
+UpdateScript = """
+label.0
+lookAtPlayer.2.1
+ifPlayerIsClose.20
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.3005
+talk.<
+    Наконец я могу покинуть этот Эфир и дезертировать.
+    Найдёшь меня в Морионе, нашем тайном и безопасном месте.
+    По амулету тебя пропустят.
+    Спасибо тебе, Эми.
+>
+givePlayerCards.1.0.9
+waitForUser
+delay.10
+startEffect.0.-1
+removeNpc"""

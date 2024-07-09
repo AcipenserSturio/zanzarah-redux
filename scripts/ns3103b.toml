@@ -1,0 +1,37 @@
+UID = "B2989D04"
+Name = "89D5E391"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<Приветствую, Эми, спасительницу Болотных Гоблинов.>.0
+waitForUser
+setTalkLabels.1.2.1
+talk.<
+    Я теперь собираю лекарственные травы, потому что болото стало безопасным.
+    Не хочешь ли купить - одна порция за восемьдесят монет?
+>
+waitForUser
+label.1
+ifPlayerHasCards.8.0.4
+givePlayerCards.1.0.3
+removePlayerCards.8.0.4
+exit
+endIf
+talk.<
+    Ты, должно быть, ошиблась.
+    Здесь нет восьмидесяти золотых монет.
+>
+waitForUser
+exit
+label.2
+exit"""
+InitScript = """
+setModel.g007s01m
+defaultWizForm.187.0.19
+defaultWizForm.152.1.14
+defaultWizForm.51.2.15
+defaultWizForm.147.3.17
+defaultWizForm.174.4.13"""
+UpdateScript = """
+deployNpcAtTrigger.67.0
+lookAtPlayer.-1.1"""

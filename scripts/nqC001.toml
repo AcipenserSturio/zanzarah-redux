@@ -1,0 +1,58 @@
+UID = "1E12D3B4"
+Name = "23D47EB1"
+TriggerScript = """
+deployNpcAtTrigger.65.1
+setCamera.3000
+playAnimation.13.-1
+say.<Привет от Великого и Непобедимого Сиамуса.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    {4*Я} один дойду до вершины башни и завоюю приз.
+    Я настоящий герой, который низвергнет силы Тьмы раз и навсегда.
+    
+>
+waitForUser
+setTalkLabels.10.11.1
+talk.<
+    Ты слишком слаба.
+    Возвращайся в свой человеческий мир и играй там в куклы.
+    Или ты хочешь сразиться со мной?
+>
+waitForUser
+label.10
+setCamera.1006
+fight.-1.0
+exit
+label.11
+setTalkLabels.-1.-1.0
+talk.<В любом случае у тебя никаких шансов.>
+waitForUser
+exit"""
+InitScript = """
+setModel.g204s20m
+defaultWizForm.112.0.31
+defaultWizForm.121.1.36
+defaultWizForm.2.2.34
+defaultWizForm.156.3.41
+defaultWizForm.191.4.39"""
+UpdateScript = """
+label.0
+lookAtPlayer.1.1
+ifPlayerIsClose.2
+startPrelude
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.3000
+setTalkLabels.-1.-1.0
+talk.<
+    Я опять тебе проиграл! Почему, почему?
+    Пожалуй, лучше вернусь домой.
+>
+waitForUser
+changeWaypoint.30.31
+setCamera.3004
+changeWaypoint.31.32
+changeWaypoint.32.33
+removeNpc"""

@@ -1,0 +1,45 @@
+UID = "1D5352B4"
+Name = "27AFE091"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+ifNpcModifierHasValue.0
+goto.1
+endIf
+say.<Опять ты...>.0
+waitForUser
+talk.<Ты сильный соперник, думаю, дальше твой путь путь будет безопасен для тебя.>
+waitForUser
+exit
+label.1
+say.<Что человек делает в лесу?>.0
+waitForUser
+setTalkLabels.10.11.1
+talk.<
+    Осторожно, феи в этой части {4*Занзары} очень агрессивны.
+    Попробуй победить моих фею и тогда узнаешь, насколько ты опытна, хорошо?
+>
+waitForUser
+label.10
+setCamera.1006
+fight.-1.0
+exit
+label.11
+exit"""
+InitScript = """
+setModel.g300s30m
+movementSpeed.14
+defaultWizForm.7.0.22
+defaultWizForm.194.1.21
+defaultWizForm.142.2.19
+defaultWizForm.115.3.14
+defaultWizForm.57.4.16"""
+UpdateScript = "lookAtPlayer.0.1"
+DefeatedScript = """
+setCamera.1000
+setNpcModifier.-1.-1.1
+setTalkLabels.-1.-1.0
+talk.<
+    Глазам своим не верю! Человек умудрился победить моих фей! Что дальше будет?!
+>
+waitForUser"""

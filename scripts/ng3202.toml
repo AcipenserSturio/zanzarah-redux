@@ -1,0 +1,75 @@
+UID = "1EB60484"
+Name = "5FFBCC31"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<Lryrlab y'gfar.>.0
+waitForUser
+label.10
+say.<
+    Al y'az tqpegab pravcar {4*y'mreav'qox} и {4*y'anmreav'qox} y'wuravz'i'h.
+    A'pe threava'p'y breava?
+>.1
+choice.0.<Расскажи, как получить {4*заклинания}>
+choice.1.<Составь для меня {4*набор} заклинаний>
+choice.2.<Я скоро вернусь>
+waitForUser
+label.0
+setTalkLabels.-1.-1.2
+talk.<
+    Tre hreafas pegab.
+    Al y'az loraghar kipva y'dapebveg'qox y'wuravz'i'h lo ro'xoq y'gfar.
+    Pi az l'co'i'h an pegab qrora'p'y...
+    
+>
+waitForUser
+talk.<
+    ...
+    az pewara'y'p l'kraevar'qox yurav y'wuravz, o ro threava'r'p pravcarva ireq, per wert p'xeazava'r'd.
+    O prpro w'nreava o, per l'tre a'fper'qox o a'mveq'qox...
+>
+waitForUser
+setTalkLabels.0.10.1
+talk.<
+    ...
+    Az yutva'p'y v l'req l'yurav beya {4*y'xcer'qox y'mneb}.
+    Wqe p req {4*l'wuravz} prear'qox o an tbdaeva'e'p.
+    Xeazava'r'p az ipi irew berava'd'y lreb'i'h?
+>
+waitForUser
+goto.10
+label.1
+setupGambling.15.3.0
+setupGambling.1.1.4
+setupGambling.1.1.8
+setupGambling.1.1.12
+setupGambling.1.1.16
+setupGambling.1.1.24
+setupGambling.1.1.26
+setupGambling.1.1.33
+setupGambling.1.1.39
+setupGambling.1.1.41
+setupGambling.1.1.49
+setupGambling.1.1.53
+setupGambling.1.1.58
+setupGambling.1.1.60
+setupGambling.1.1.69
+setupGambling.1.1.71
+setupGambling.1.1.76
+setupGambling.1.1.80
+setupGambling.1.1.86
+setupGambling.1.1.92
+setupGambling.1.1.96
+setupGambling.1.1.100
+setupGambling.1.1.106
+setupGambling.1.1.114
+setupGambling.1.1.116
+waitForUser
+goto.10
+label.2
+exit"""
+InitScript = """
+setCollision.0
+setModel.w006s02m
+defaultWizForm.83.0.10"""
+UpdateScript = "lookAtPlayer.0.1"

@@ -1,0 +1,29 @@
+UID = "57B26114"
+Name = "8A7E3C91"
+TriggerScript = """
+playSound.3
+say.<Кто меня беспокоит?>.0
+setCamera.1000
+waitForUser
+talk.<
+    Кто потревожил мой покой?
+    Человек?
+    Я буду защищать Эдем до конца!
+>
+waitForUser
+fight.-1.0"""
+InitScript = """
+setNpcType.3
+defaultWizForm.222.0.18
+spell.0.0.3
+spell.0.1.124
+spell.0.2.0"""
+DefeatedScript = """
+talk.<
+    Ладно, забирай свой шар.
+    Только не думай допустить вред Эдему, тогда тебе не поздоровится.
+>
+waitForUser
+createDynamicItems.4.5.-1
+startEffect.1.-1
+removeNpc"""

@@ -1,0 +1,59 @@
+UID = "30D9A6B4"
+Name = "1F270491"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+ifPlayerHasCards.1.0.22
+goto.10
+endIf
+ifPlayerHasCards.1.0.44
+goto.20
+endIf
+say.<
+    Слушайте все! Слушайте все!
+>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Объявлен турнир Повелителей фей.
+    Тот, кто доберется до вершины {4*Большого Дерева}, получит {4*Карту Воздуха}.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Существует только одна {4*Карта Воздуха}.
+    Кто ее получит, тот с ней отправится на поиски предателя {4*Квинлина}.
+>
+waitForUser
+exit
+label.10
+say.<Добро пожаловать на Большое дерево, Эмми.>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Гномы невиновны?
+    Это Друид – тот, кто вызвал Темных Эльфов?
+    Благослови мои болотные пузыри, ты совсем меня запутала.
+>
+waitForUser
+exit
+label.20
+say.<Добро пожаловать на Большое дерево, Эмми.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Ты получила {4*Карту Воздуха}?
+    Теперь тебе надо найти {4*Квинлина}, потерявшегося вождя гномов.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    {4*Посох} Квинлина доказывает, что он работал с {4*Тёмными Эльфами}.
+    Найди предателя и накажи его!
+>
+waitForUser
+exit"""
+InitScript = """
+setModel.g001s01m
+defaultWizForm.174.0.10"""
+UpdateScript = "lookAtPlayer.0.1"

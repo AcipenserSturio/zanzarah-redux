@@ -1,0 +1,64 @@
+UID = "582574A4"
+Name = "E95016B1"
+TriggerScript = """
+ifNumberOfNpcsIs.0.ABF0DA04
+goto.10
+endIf
+say.<Ты можешь спасти меня, победив этого толстого и капризного {4*Тёмного Эльфа}.>.0
+waitForUser
+exit
+label.10
+deployNpcAtTrigger.36.1
+setCamera.3004
+startEffect.3.67
+delay.2
+startEffect.3.68
+delay.2
+startEffect.3.69
+delay.2
+startEffect.3.67
+startEffect.3.70
+delay.2
+startEffect.3.68
+startEffect.3.71
+delay.2
+startEffect.3.69
+startEffect.3.72
+delay.2
+endActorEffect
+say.<Хорошая работа, Эми!>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Так это {4*Друид} запер моего отца?
+    Его страх перед людьми, должно быть, ослепил его.
+    Мы должны остановить его и уничтожить {4*Стража}, иначе он разрушит всю {4*Занзару}.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Ты получила {4*ключ} от {4*волшебных ворот} у моего отца?
+    Воспользуйся им, чтобы попасть в ужасное {4*Пустомирье}.
+    Уничтожь {4*Стража} и прекрати это бедствие.
+>
+waitForUser
+changeWaypoint.30.31
+setTalkLabels.-1.-1.0
+talk.<
+    Я вернусь в деревню гномов {4*Монагам} повидать отца, жену и друзей.
+    Приходи к нам, когда захочешь.
+    Тебе всегда рады.
+>
+waitForUser
+changeWaypoint.31.32
+setNpcModifier.3404.3.1
+removeNpc"""
+InitScript = """
+setModel.d006s02m
+defaultWizForm.134.0.39
+defaultWizForm.168.1.37
+defaultWizForm.110.2.33
+defaultWizForm.123.3.32
+defaultWizForm.46.4.31
+startActorEffect.1"""
+UpdateScript = "lookAtPlayer.-1.1"

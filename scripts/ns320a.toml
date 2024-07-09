@@ -1,0 +1,63 @@
+UID = "E985B6B4"
+Name = "268FD991"
+TriggerScript = """
+playAnimation.13.-1
+setCamera.1000
+ifNpcModifierHasValue.0
+goto.10
+else
+goto.12
+endIf
+label.10
+ifNumberOfNpcsIs.1.75ED2A94
+say.<
+    Благослови всех эльфов этого мира! Я спасен!
+>.0
+waitForUser
+talk.<
+    В моем подвале ужасный монстр! Ты мне можешь помочь?
+    С твоими размерами будет легко поймать это отвратительное существо!
+>
+waitForUser
+exit
+else
+setNpcModifier.-1.-1.1
+talk.<
+    Спасибо тебе за избавление от этого чудища, теперь я снова могу вернуться к своим {4*магическим предметам}.
+    Если хочешь, я продам тебе несколько!
+>
+waitForUser
+exit
+label.12
+say.<Рад тебя снова видеть, человеческий детеныш.>.0
+waitForUser
+label.11
+say.<Чем могу помочь?>.1
+choice.0.<Магические предметы>
+choice.1.<Информация о катакомбах Тиралина>
+choice.2.<Не сейчас>
+waitForUser
+endIf
+exit
+label.2
+exit
+label.0
+tradingCurrency.C564B4A3
+tradingItem.250.9ED19693
+tradingItem.400.31375403
+tradingItem.40.1889A2B3
+tradingItem.700.BC23A403
+waitForUser
+goto.11
+label.1
+talk.<
+    Катакомбы {4*Тиралина} – ужасное место, куда давно не осмеливается войти ни один эльф.
+    Там живут злобные феи Хаоса и Тьмы, а также обитает странный сброд.
+    Также недавно туда залетали некоторые феи с большим количеством добра.
+>
+waitForUser
+goto.11"""
+InitScript = """
+setModel.g203s23m
+defaultWizForm.161.0.10"""
+UpdateScript = "lookAtPlayer.-1.1"

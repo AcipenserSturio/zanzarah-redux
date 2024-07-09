@@ -1,0 +1,74 @@
+UID = "900FC934"
+Name = "389D7EB1"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<
+    Интересно...
+    Повелитель фей из человеческого мира?
+>.0
+waitForUser
+ifPlayerHasCards.1.0.22
+setTalkLabels.-1.-1.2
+talk.<
+    Я все еще не могу поверить, что {4*Друид} принес хаос в Занзару! Так это он запер Квинлина и обвиняет нас?
+    Надо узнать, почему он решился на это...
+>
+waitForUser
+goto.0
+endIf
+ifPlayerHasCards.1.0.26
+setTalkLabels.-1.-1.2
+talk.<
+    Ты нашла артефакт гномов у Нхестада Отважного?
+    Теперь все в Занзаре поверят, что это мы заключили союз с Тёмными Эльфами.
+>
+waitForUser
+endIf
+label.0
+setTalkLabels.1.2.1
+talk.<
+    Я вижу, ты собрала интересную коллекцию фей.
+    Хочешь небольшой дружеский поединок со мной?
+    Узнаем, кто настоящий Повелитель фей.
+>
+waitForUser
+label.1
+setCamera.1006
+fight.-1.0
+label.2
+setTalkLabels.-1.-1.0
+talk.<Жаль, Я все еще ищу достойного соперника.>
+waitForUser"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.7.0.14
+defaultWizForm.43.1.16
+defaultWizForm.34.2.17
+defaultWizForm.58.3.19
+defaultWizForm.24.4.14"""
+UpdateScript = "lookAtPlayer.-1.1"
+DefeatedScript = """
+setCamera.3005
+setTalkLabels.1.2.1
+talk.<
+    Ты хорошо сражалась! Наконец-то я нашел равного себе Повелителя фей.
+    Я много путешествовал.
+    Хочешь узнать побольше о {4*Непобедимой комбинации}?
+>
+waitForUser
+label.1
+setTalkLabels.-1.-1.2
+talk.<
+    У нас есть легенда об {4*\"Идеальном Сочетании Фей\"}.
+    Я всё еще ищу эту непобедимую комбинацию фей.
+    
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Каждая фея обладает собственными {4*достоинствами} и {4*недостатками}, но только в правильной комбинации их способности приобретают важное значение.>
+waitForUser
+label.2
+changeDatabase.5AC06084
+exit"""
+VictoriousScript = "killPlayer"

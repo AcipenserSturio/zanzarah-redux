@@ -1,0 +1,47 @@
+UID = "285EB684"
+Name = "2B4B0221"
+TriggerScript = """
+ifPlayerHasSpecials.3.2
+delay.15
+setCamera.3002
+say.<Ужасно, что все это произошло.>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Ты спасла {4*Квинлина} со старой фабрики?
+    Тогда ты, несомненно, поняла, что {4*гномы} не враги.
+    Они никогда не имели дел с {4*Тёмными Эльфами}.
+>
+waitForUser
+setCamera.3003
+startEffect.1.36
+delay.3
+deployNpcAtTrigger.36.ABF0DA04
+talk.<
+    Это моя сила заблокировала ваши дороги и помогла {4*Тёмным Эльфам} вырваться из Пустомирья.
+    Предсказание никогда не должно сбыться.
+    {4*Страж} не должен быть повержен!
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Я оставлю твоего друга {4*Лассе} на попечении Рагмаша.
+    Он о нём хорошо позаботится.
+    Возвращайся, Эми.
+    Покинь {4*Занзару}, или я буду лично доказать, что только я являлся, являюсь и буду являться настоящим Повелителем фей.
+>
+waitForUser
+startEffect.0.-1
+delay.2
+removeNpc
+exit
+killPlayer
+setCamera.1000
+changeWaypoint.-1.-1
+talk.<Do you want to eat or drink?>
+exit
+endIf"""
+InitScript = """
+setModel.v000s00
+defaultWizForm.181.0.10"""
+UpdateScript = "startPrelude"

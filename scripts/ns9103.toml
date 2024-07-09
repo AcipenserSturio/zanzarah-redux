@@ -1,0 +1,143 @@
+UID = "CB2B6E04"
+Name = "0E2216B1"
+TriggerScript = """
+ifNumberOfNpcsIs.1.149DEE04
+goto.40
+endIf
+playAnimation.13.-1
+setCamera.1000
+ifPlayerHasCards.1.0.22
+goto.10
+endIf
+ifPlayerHasCards.1.0.25
+goto.30
+endIf
+ifNpcModifierHasValue.4
+say.<Оставь меня, обманщица!>.0
+waitForUser
+exit
+endIf
+say.<Должно быть ты тот человек, о котором говорит вся Занзара.>.0
+waitForUser
+setTalkLabels.11.12.1
+talk.<
+    Моего друга {4*гнома Лассе} и его отца нигде нет.
+    Ты не встречала по пути моего Лассе?
+>
+waitForUser
+label.11
+setTalkLabels.-1.-1.0
+talk.<
+    О?
+    Ты часто его встречаешь?
+    Мне не нравится, когда незнакомые женщины встречаются с {4*моим} другом!
+>
+waitForUser
+setCamera.1006
+fight.1.0
+label.12
+setTalkLabels.-1.-1.0
+talk.<
+    Ты не встречала его?
+    Тогда как ты достала его {4*Книгу фей}?
+    Да ты обычная воровка!
+>
+waitForUser
+setCamera.1006
+setNpcModifier.88882211.37.4
+fight.1.0
+label.10
+ifNpcModifierHasValue.4
+say.<
+    Привет, Эмми.
+    Ты не так уж плоха...
+    для человека.
+>.0
+waitForUser
+goto.20
+endIf
+setTalkLabels.-1.-1.2
+talk.<
+    Ты на правильном пути, Эмми.
+    Воспользуйся {4*Волшебным ключом} и найди {4*Стража}.
+    
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Я буду вечно тебе благодарна, если ты освободишь моего друга  Лассе из рук Друида.
+    Если хочешь спасти его, поторопись в {4*Белый Собор}!
+>
+waitForUser
+label.20
+setTalkLabels.25.26.1
+talk.<
+    Я живу в этом доме с {4*Лассе}.
+    Если бы только он был в деревне почаще!
+>
+waitForUser
+label.25
+changeDatabase.E856B204
+exit
+label.26
+exit
+label.30
+say.<Друид схватил Лассе?>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Мой Лассе не вор! Наш вождь, {4*Квинлин}, может это доказать.
+>
+waitForUser
+talk.<
+    Единственный способ доказать невиновность Лассе, это узнать, кто стоит за этими интригами.
+    Найди нашего вождя, {4*Квинлина}!
+>
+waitForUser
+goto.20
+label.40
+deployNpcAtTrigger.5.1
+setCamera.3001
+playAnimation.13.-1
+say.<Добро пожаловать в нашу скромную хижину, Эмми.>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Спасибо тебя за спасение Лассе от Друида.
+    Теперь я могу отправляться в путь, а Лассе присмотрит за домом.
+>
+waitForUser
+changeWaypoint.1.2
+changeWaypoint.2.3
+removeNpc"""
+InitScript = """
+setModel.g000s00m
+defaultWizForm.4.4.10"""
+UpdateScript = "lookAtPlayer.-1.1"
+DefeatedScript = """
+deployNpcAtTrigger.41.1
+ifNpcModifierHasValue.4
+setTalkLabels.-1.-1.0
+talk.<Ты можешь меня победить, но пока ты мне {4*врешь}, мы не станем друзьями.>
+waitForUser
+exit
+endIf
+setTalkLabels.-1.-1.0
+talk.<
+    О, вы просто {4*друзья}.
+    Я так и  предполагала.
+    {4*Мой Лассе} не любит высоких женщин.
+>
+waitForUser
+setTalkLabels.7.8.1
+talk.<
+    Я живу в этом доме с {4*Лассе}.
+    Если бы только он был в деревне почаще!
+>
+waitForUser
+label.7
+changeWaypoint.5.6
+changeDatabase.E856B204
+label.8
+exit"""
+VictoriousScript = "killPlayer"

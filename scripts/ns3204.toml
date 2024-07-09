@@ -1,0 +1,48 @@
+UID = "B8FAD994"
+Name = "20497DB1"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<О, человек в нашем мире?!>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Я раньше не видел людей, не говоря уже о человеке с {4*феей}! Давай, посмотрим, чьи феи лучше.
+    Если ты победишь, я дам тебе полезный {4*предмет}!
+>
+waitForUser
+setCamera.1006
+fight.223.0"""
+InitScript = """
+setModel.g300s30m
+defaultWizForm.0.0.6
+defaultWizForm.3.1.6
+defaultWizForm.6.2.6"""
+UpdateScript = """
+label.0
+ifPlayerIsClose.11
+startPrelude
+else
+lookAtPlayer.5.1
+endIf
+goto.0"""
+DefeatedScript = """
+setCamera.1000
+setTalkLabels.-1.-1.2
+talk.<
+    Твое мастерство меня удивило.
+    Возьми несколько {4*флаконов маны}.
+    Можешь использовать это для зарядки своих фей {4*маной}.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Лучше проверь, достаточно ли у твоей феи {4*маны}.
+    Если ее энергия израсходована, то автоматически расходуется ее жизнь, что для феи не очень хорошо.
+>
+waitForUser
+givePlayerCards.5.0.60
+setCamera.3000
+changeWaypoint.-1.100
+removeNpc
+setCamera.1006"""

@@ -1,0 +1,93 @@
+UID = "E856B204"
+Name = "0E2216B1"
+TriggerScript = """
+ifNumberOfNpcsIs.1.149DEE04
+goto.40
+endIf
+playAnimation.13.-1
+setCamera.1000
+say.<Привет Эмми, есть новости о моем друге, Гноме Лассе?>.0
+waitForUser
+ifPlayerHasCards.1.0.22
+goto.10
+endIf
+ifPlayerHasCards.1.0.25
+goto.30
+endIf
+label.0
+say.<У тебя есть друг в мире людей?>.1
+choice.1.<Да>
+choice.2.<Нет>
+choice.3.<Я тебе не скажу.>
+waitForUser
+label.1
+setTalkLabels.-1.-1.0
+talk.<
+    Теперь можешь представить, как я скучаю по {4*моему Лассе}.
+    Я искала его, но мои феи слишком слабы для долгого путешествия.
+>
+waitForUser
+exit
+label.2
+setTalkLabels.-1.-1.2
+talk.<
+    {4*Лассе} все время путешествует.
+    Если он не найдет своего отца, {4*Гнома - Мастера}, он будет продолжать поиски вечно.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Но я не хочу его вечно ждать!>
+waitForUser
+exit
+label.3
+exit
+label.10
+setTalkLabels.-1.-1.2
+talk.<
+    Ты на правильном пути, Эмми.
+    Воспользуйся {4*Волшебным ключом} и найди {4*Стража}.
+    
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Я буду вечно тебе благодарна, если ты освободишь моего друга  Лассе из рук Друида.
+    Если хочешь спасти его, поторопись в {4*Белый Собор}!
+>
+waitForUser
+goto.0
+label.30
+say.<Друид схватил Лассе?>.0
+waitForUser
+setTalkLabels.-1.-1.2
+talk.<
+    Мой Лассе не вор! Наш вождь, {4*Квинлин}, может это доказать.
+>
+waitForUser
+talk.<
+    Единственный способ доказать невиновность Лассе, это узнать, кто стоит за этими интригами.
+    Найди нашего вождя, {4*Квинлина}!
+>
+waitForUser
+goto.0
+label.40
+deployNpcAtTrigger.5.1
+setCamera.3001
+playAnimation.13.-1
+say.<Добро пожаловать в нашу скромную хижину, Эмми.>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Спасибо тебя за спасение Лассе от Друида.
+    Теперь я могу отправляться в путь, а Лассе присмотрит за домом.
+>
+waitForUser
+changeWaypoint.1.2
+changeWaypoint.2.3
+removeNpc"""
+InitScript = """
+setModel.g000s00m
+wizform.1.1.2"""
+UpdateScript = """
+deployNpcAtTrigger.40.0
+lookAtPlayer.-1.-1"""

@@ -1,0 +1,76 @@
+UID = "191C6894"
+Name = "D5161F81"
+TriggerScript = """
+playAnimation.14.-1
+setCamera.1000
+ifNpcModifierHasValue.0
+say.<Привет, чужестранец, как тебе моя кузница?>.0
+waitForUser
+goto.0
+else
+goto.1
+endIf
+label.0
+ifPlayerHasCards.1.0.70
+setTalkLabels.-1.-1.0
+talk.<
+    А, я вижу, ты нашла {4*инструменты гномов}.
+    Здорово, теперь я смогу многое узнать о магии металла.
+>
+waitForUser
+setNpcModifier.-1.-1.1
+playAnimation.33.0
+exit
+endIf
+setTalkLabels.-1.-1.2
+talk.<
+    Я здесь уже давно, и все пытаюсь обучиться древнему искусству гномов, но это невозможно.
+    Мы слишком многое забыли.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Мне очень нужны {4*старинные инструменты}.
+    Если бы я мог  их изучить, то я нашел бы способ восстановить {4*Магию Металла}.
+>
+waitForUser
+playAnimation.33.0
+exit
+label.1
+gotoRandomLabel.2.100
+label.100
+say.<Добро пожаловать в мою кузницу.>.0
+waitForUser
+goto.110
+label.101
+say.<Рад тебя видеть.>.0
+waitForUser
+label.110
+setTalkLabels.10.11.1
+talk.<
+    Благодаря тебе, я могу использовать магическую силу {4*металла гномов} и создавать заклинания.
+    Хочешь выбрать?
+>
+waitForUser
+label.10
+setupGambling.3.1.55
+setupGambling.3.1.56
+setupGambling.3.1.57
+setupGambling.3.1.58
+setupGambling.3.1.59
+setupGambling.3.1.115
+setupGambling.3.1.116
+setupGambling.3.1.117
+setupGambling.3.1.118
+setupGambling.3.1.119
+waitForUser
+playAnimation.33.0
+exit
+label.11
+playAnimation.33.0
+exit"""
+InitScript = """
+setNpcType.4
+setModel.d008s00m
+defaultWizForm.141.0.10
+playAnimation.33.0"""

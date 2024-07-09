@@ -1,0 +1,42 @@
+UID = "96837434"
+Name = "F491CB81"
+TriggerScript = """
+playAnimation.13.-1
+setCamera.1000
+say.<Добро пожаловать в мой скромный магазин!>.0
+waitForUser
+label.10
+say.<Чем могу помочь?>.1
+choice.0.<Купить разные предметы>
+choice.1.<Что известно о Феях Огня?>
+choice.2.<До свидания.>
+waitForUser
+label.0
+tradingCurrency.BAA9B8A3
+tradingItem.3.99D2B4A3
+tradingItem.4.AD58B4A3
+tradingItem.3.99613EA3
+tradingItem.5.2E2FB8A3
+tradingItem.70.30B30713
+waitForUser
+goto.10
+label.1
+setTalkLabels.-1.-1.2
+talk.<
+    {4*Феи Огня} – очень редкие существа в Занзаре.
+    Мало кто видел их не видел с древнейших времен, особенно учитывая, что они живут в жарких и опасных местах.
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Говорят, что в {4*лаборатории Квинлина} есть доступ в дом {4*фей Огня}.
+    Но для нас это недоступно с тех пор, как давным-давно сломался {4*дверной механизм}...
+>
+waitForUser
+goto.10
+label.2
+exit"""
+InitScript = """
+setModel.d003s03m
+defaultWizForm.144.0.10"""
+UpdateScript = "lookAtPlayer.-1.1"

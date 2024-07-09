@@ -1,0 +1,39 @@
+UID = "5AC06084"
+Name = "389D7EB1"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+say.<Эми, Гном Эйрик приветствует тебя.>.0
+waitForUser
+ifPlayerHasCards.1.0.22
+setTalkLabels.-1.-1.2
+talk.<
+    Я все еще не могу поверить, что {4*Друид} принес хаос в Занзару! Так это он запер Квинлина и обвиняет нас?
+    Надо узнать, почему он решился на это...
+>
+waitForUser
+exit
+endIf
+ifPlayerHasCards.1.0.26
+setTalkLabels.-1.-1.2
+talk.<
+    Ты нашла артефакт гномов у Нхестада Отважного?
+    Теперь все в Занзаре поверят, что это мы заключили союз с Тёмными Эльфами.
+>
+waitForUser
+exit
+endIf
+setTalkLabels.-1.-1.2
+talk.<
+    У нас есть легенда об {4*\"Идеальном Сочетании Фей\"}.
+    Я всё еще ищу эту непобедимую комбинацию фей.
+    
+>
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<Каждая фея обладает собственными {4*достоинствами} и {4*недостатками}, но только в правильной комбинации их способности приобретают важное значение.>
+waitForUser"""
+InitScript = """
+setModel.d000s00m
+defaultWizForm.7.0.14"""
+UpdateScript = "lookAtPlayer.-1.1"
