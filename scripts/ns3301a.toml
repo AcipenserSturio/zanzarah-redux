@@ -22,5 +22,5 @@ talk.<
 waitForUser"""
 InitScript = """
 setModel.d000s00m
-defaultWizForm.152.0.20"""
+defaultWizForm.153.0.20"""
 UpdateScript = "lookAtPlayer.0.1"

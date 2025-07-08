@@ -102,7 +102,7 @@ label.8
 exit"""
 InitScript = """
 setModel.g006s00m
-defaultWizForm.171.0.10
+defaultWizForm.172.0.10
 movementSpeed.7"""
 UpdateScript = """
 label.0

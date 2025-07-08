@@ -51,5 +51,5 @@ waitForUser
 goto.10"""
 InitScript = """
 setModel.g202s22m
-defaultWizForm.163.0.10"""
+defaultWizForm.164.0.10"""
 UpdateScript = "lookAtPlayer.0.1"

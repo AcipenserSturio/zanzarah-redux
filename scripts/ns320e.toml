@@ -11,8 +11,9 @@ InitScript = """
 setNpcType.3
 setCollision.0
 ifNpcModifierHasValue.1
-defaultWizForm.126.0.20
+defaultWizForm.231.0.30
 defaultWizForm.126.1.20
+defaultWizForm.126.2.20
 else
 defaultWizForm.127.0.25
 defaultWizForm.125.1.25

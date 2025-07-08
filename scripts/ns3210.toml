@@ -30,7 +30,7 @@ InitScript = """
 setModel.g300s30m
 movementSpeed.14
 defaultWizForm.7.0.22
-defaultWizForm.194.1.21
+defaultWizForm.195.1.21
 defaultWizForm.142.2.19
 defaultWizForm.115.3.14
 defaultWizForm.57.4.16"""

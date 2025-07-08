@@ -18,7 +18,7 @@ removeNpc"""
 InitScript = """
 setNpcType.0
 setCollision.1
-wizform.0.228.30"""
+wizform.0.229.30"""
 UpdateScript = """
 label.0
 idle

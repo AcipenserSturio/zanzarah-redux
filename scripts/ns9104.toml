@@ -8,10 +8,9 @@ waitForUser
 setTalkLabels.-1.-1.2
 talk.<
     Спасибо, что сберегла мой посох.
-    Держи эту редкую карту в подарок.
+    Пока оставь у себя, пока не победишь Стража, а пока что держи эту редкую карту в подарок.
 >
 waitForUser
-removePlayerCards.1.0.26
 givePlayerCards.1.0.49
 changeDatabase.DEC1BEA4"""
 InitScript = """

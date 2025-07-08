@@ -193,7 +193,7 @@ exit"""
 InitScript = """
 movementSpeed.10
 setModel.g000s00m
-defaultWizForm.205.0.10"""
+defaultWizForm.206.0.10"""
 UpdateScript = """
 lookAtPlayer.35.1
 label.0

@@ -14,7 +14,7 @@ waitForUser
 fight.-1.0"""
 InitScript = """
 setNpcType.3
-defaultWizForm.222.0.18
+defaultWizForm.223.0.18
 spell.0.0.3
 spell.0.1.124
 spell.0.2.0"""

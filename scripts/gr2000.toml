@@ -1,0 +1,25 @@
+UID = "6606BBB4"
+Name = "F66DC381"
+TriggerScript = """
+setCamera.1000
+playAnimation.13.-1
+playPlayerAnimation.15.-1
+say.<Интересная форма жизни.>.0
+waitForUser
+setTalkLabels.-1.-1.0
+talk.<
+    Дам тебе совет.
+    Некоторые места в Занзаре можно спокойно обойти при должной сноровке.
+    Кто бы что не говорил, но это возможно.
+    Даже Творец ничего с этим не может сделать.
+    А если и сделает, то я назову его Васяном.
+    Так что действуй.
+>
+waitForUser
+startEffect.1.-1
+removeNpc
+exit"""
+InitScript = """
+setModel.u020s03m
+defaultWizForm.143.0.0"""
+UpdateScript = "lookAtPlayer.0.0"

@@ -15,8 +15,8 @@ fight.-1.0"""
 InitScript = """
 setNpcType.3
 defaultWizForm.102.0.61
-defaultWizForm.144.1.61
-defaultWizForm.170.2.61
+defaultWizForm.145.1.61
+defaultWizForm.171.2.61
 defaultWizForm.39.3.61"""
 DefeatedScript = """
 talk.<

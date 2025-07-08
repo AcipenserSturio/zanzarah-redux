@@ -20,5 +20,5 @@ label.6
 exit"""
 InitScript = """
 setModel.g201s21m
-wizform.0.228.40"""
+wizform.0.229.40"""
 UpdateScript = "lookAtPlayer.-1.1"

@@ -59,10 +59,10 @@ waitForUser
 exit"""
 InitScript = """
 setModel.u001s01m
-defaultWizForm.170.0.30
-defaultWizForm.191.1.35
+defaultWizForm.171.0.30
+defaultWizForm.192.1.35
 defaultWizForm.83.2.32
-defaultWizForm.143.3.35
+defaultWizForm.144.3.35
 defaultWizForm.113.4.32"""
 UpdateScript = """
 label.0
@@ -79,7 +79,7 @@ talk.<
     как я мог проиграть?
     Забирай эту чёртову фею, не хочу ничего больше иметь с вашим миром, и жди следующей встречи, человек!
 >
-givePlayerCards.1.2.170
+givePlayerCards.1.2.171
 waitForUser
 delay.10
 startEffect.0.-1

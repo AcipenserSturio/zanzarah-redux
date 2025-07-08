@@ -1,0 +1,16 @@
+UID = "6606B694"
+Name = "8999AF11"
+TriggerScript = """
+setCamera.1001
+playVideo.7
+waitForUser
+killPlayer
+exit"""
+InitScript = "defaultWizForm.143.0.0"
+UpdateScript = """
+label.0
+lookAtPlayer.10.1
+ifPlayerIsClose.30
+startPrelude
+endIf
+goto.0"""

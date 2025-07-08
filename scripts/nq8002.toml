@@ -19,8 +19,8 @@ InitScript = """
 setModel.u003s03m
 defaultWizForm.25.0.35
 defaultWizForm.99.1.30
-defaultWizForm.145.2.34
-defaultWizForm.146.3.40
+defaultWizForm.146.2.34
+defaultWizForm.147.3.40
 defaultWizForm.101.4.38"""
 UpdateScript = "lookAtPlayer.-1.1"
 DefeatedScript = """

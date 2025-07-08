@@ -24,10 +24,10 @@ exit"""
 InitScript = """
 setModel.g203s23m
 defaultWizForm.68.0.39
-defaultWizForm.167.1.44
+defaultWizForm.168.1.44
 defaultWizForm.103.2.41
 defaultWizForm.30.3.38
-defaultWizForm.177.4.40"""
+defaultWizForm.178.4.40"""
 UpdateScript = """
 label.0
 idle

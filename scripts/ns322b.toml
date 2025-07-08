@@ -9,7 +9,7 @@ waitForUser
 setTalkLabels.-1.-1.0
 talk.<
     {4*Тёмный Собор} - прибежище {4*Стража}, нашего защитника от человеческой погани.
-
+    
 >
 waitForUser
 setCamera.3002
@@ -36,9 +36,9 @@ waitForUser
 fight.-1.-1"""
 InitScript = """
 defaultWizForm.74.0.60
-defaultWizForm.199.1.61
+defaultWizForm.200.1.61
 defaultWizForm.96.2.61
-defaultWizForm.202.3.61
+defaultWizForm.203.3.61
 defaultWizForm.118.4.61
 setModel.v000s00"""
 UpdateScript = """

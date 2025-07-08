@@ -15,7 +15,7 @@ waitForUser
 setTalkLabels.10.11.1
 talk.<
     Ты  готова участвовать в поединке фей?
-
+    
 >
 waitForUser
 label.10
@@ -31,7 +31,7 @@ defaultWizForm.28.0.28
 defaultWizForm.55.1.30
 defaultWizForm.51.2.33
 defaultWizForm.130.3.29
-defaultWizForm.153.4.26"""
+defaultWizForm.154.4.26"""
 UpdateScript = """
 label.0
 idle

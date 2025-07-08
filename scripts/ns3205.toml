@@ -16,7 +16,7 @@ talk.<
     Если тебе улыбнется удача, ты даже найдешь одно из этих{4*магических мест} у моего камня! А я отправлюсь с тобой в приключения.
     Давно там не был.
 >
-givePlayerCards.1.2.144
+givePlayerCards.1.2.145
 waitForUser
 setCamera.3100
 delay.20
@@ -24,4 +24,4 @@ setCamera.1006
 delay.20
 startEffect.1.-1
 removeNpc"""
-InitScript = "wizform.0.144.1"
+InitScript = "wizform.0.145.1"

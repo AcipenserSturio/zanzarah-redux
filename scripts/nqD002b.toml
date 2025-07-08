@@ -38,10 +38,10 @@ exit
 killPlayer
 setCamera.1000
 changeWaypoint.-1.-1
-talk.<Do you want to eat or drink?>
+talk.<Приветствую в Занзаре, человек.>
 exit
 endIf"""
 InitScript = """
 setModel.v000s00
-defaultWizForm.181.0.10"""
+defaultWizForm.182.0.10"""
 UpdateScript = "startPrelude"

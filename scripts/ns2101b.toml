@@ -19,7 +19,7 @@ setTalkLabels.-1.-1.0
 talk.<
     В {4*меню} ты найдешь своих фей и заклинания.
     Когда ты выберешь  заклинания и перетащишь их на фей, они смогут их использовать.
-
+    
 >
 waitForUser
 goto.0
@@ -35,7 +35,7 @@ label.3
 exit"""
 InitScript = """
 setModel.g004s03m
-defaultWizForm.179.0.10
+defaultWizForm.180.0.10
 movementSpeed.8"""
 UpdateScript = """
 label.0

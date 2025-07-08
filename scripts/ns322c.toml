@@ -16,10 +16,10 @@ waitForUser
 setCamera.1006
 fight.-1.-1"""
 InitScript = """
-defaultWizForm.183.0.60
+defaultWizForm.184.0.60
 defaultWizForm.80.1.61
-defaultWizForm.176.2.61
-defaultWizForm.199.3.61
+defaultWizForm.177.2.61
+defaultWizForm.200.3.61
 defaultWizForm.42.4.61
 setModel.v000s00"""
 UpdateScript = "lookAtPlayer.0.0"

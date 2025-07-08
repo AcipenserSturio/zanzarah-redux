@@ -29,5 +29,5 @@ label.3
 exit"""
 InitScript = """
 setModel.g208s21m
-defaultWizForm.177.0.10"""
+defaultWizForm.178.0.10"""
 UpdateScript = "lookAtTrigger.-1.13"

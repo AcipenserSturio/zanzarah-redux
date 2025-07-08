@@ -44,7 +44,7 @@ exit"""
 InitScript = """
 setModel.g004s03m
 defaultWizForm.81.0.35
-defaultWizForm.192.1.40
+defaultWizForm.193.1.40
 defaultWizForm.97.2.30
 defaultWizForm.73.3.35
 defaultWizForm.100.4.37"""

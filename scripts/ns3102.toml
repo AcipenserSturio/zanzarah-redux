@@ -33,7 +33,7 @@ exit
 endIf
 say.<
     Ты, должно быть, тот человек о котором все говорят.
-
+    
 >.0
 waitForUser
 label.9
@@ -63,5 +63,5 @@ label.12
 exit"""
 InitScript = """
 setModel.g002s02m
-defaultWizForm.179.0.10"""
+defaultWizForm.180.0.10"""
 UpdateScript = "lookAtPlayer.-1.1"

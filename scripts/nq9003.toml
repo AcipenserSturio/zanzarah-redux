@@ -27,8 +27,8 @@ setModel.u000s00m
 defaultWizForm.71.0.20
 defaultWizForm.102.1.22
 defaultWizForm.94.2.15
-defaultWizForm.146.3.19
-defaultWizForm.169.4.16"""
+defaultWizForm.147.3.19
+defaultWizForm.170.4.16"""
 UpdateScript = """
 label.0
 lookAtPlayer.2.1

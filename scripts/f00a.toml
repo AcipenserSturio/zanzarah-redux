@@ -1,8 +1,8 @@
 UID = "155FC724"
 Name = "B18BDDB1"
 TriggerScript = """
-ifPlayerHasCards.0.2.234
-say.<У тебя уже есть  фея!>.0
+ifPlayerHasCards.0.2.0
+tradingItem.1CEF5635.0
 waitForUser
 exit
 else
@@ -28,7 +28,7 @@ tradeWizform.40
 endIf
 ifNpcModifierHasValue.2
 removeWizForms
-tradeWizform.158
+tradeWizform.159
 endIf
 ifNpcModifierHasValue.3
 removeWizForms
@@ -56,7 +56,7 @@ endIf
 ifNpcModifierHasValue.2
 setNpcType.3
 setCollision.0
-wizform.0.158.0
+wizform.0.159.0
 exit
 endIf
 ifNpcModifierHasValue.3

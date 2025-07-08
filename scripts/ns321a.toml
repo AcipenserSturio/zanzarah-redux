@@ -2,9 +2,9 @@ UID = "6ECEDA24"
 Name = "11378D91"
 InitScript = """
 setModel.u008s22m
-defaultWizForm.202.0.61
-defaultWizForm.179.1.61
-defaultWizForm.166.2.61
+defaultWizForm.203.0.61
+defaultWizForm.180.1.61
+defaultWizForm.167.2.61
 defaultWizForm.124.3.61
-defaultWizForm.169.4.61"""
+defaultWizForm.170.4.61"""
 UpdateScript = "lookAtPlayer.0.1"

@@ -36,7 +36,7 @@ InitScript = """
 setNpcType.4
 setModel.v001s01
 defaultWizForm.124.0.25
-defaultWizForm.157.1.15
+defaultWizForm.158.1.15
 defaultWizForm.101.2.15
 defaultWizForm.100.3.15
 defaultWizForm.68.4.15"""

@@ -18,10 +18,10 @@ waitForUser"""
 InitScript = """
 setModel.u003s03m
 defaultWizForm.121.0.42
-defaultWizForm.154.1.39
+defaultWizForm.155.1.39
 defaultWizForm.76.2.34
 defaultWizForm.104.3.40
-defaultWizForm.179.4.40"""
+defaultWizForm.180.4.40"""
 UpdateScript = "lookAtPlayer.-1.1"
 DefeatedScript = """
 setCamera.1000

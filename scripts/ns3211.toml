@@ -27,8 +27,8 @@ waitForUser
 say.<
     Замечательно! Вот, возьми мою фею!
 >.0
-choice.7.<Снемор (фея Льда)>
-choice.6.<Ветрос (фея Воздуха)>
+choice.7.<Эш (фея Льда)>
+choice.6.<Акид (фея Воздуха)>
 choice.8.<Агнесс (фея Огня)>
 choice.9.<Мораэль (фея Тьмы)>
 waitForUser
@@ -40,7 +40,7 @@ ifPlayerHasCards.1.2.39
 talk.<Я надеюсь, ты довольна своей новой феей!>
 waitForUser
 removeWizForms
-tradeWizform.148
+tradeWizform.149
 setNpcModifier.-1.-1.1
 exit
 endIf
@@ -50,7 +50,7 @@ ifPlayerHasCards.1.2.39
 talk.<Я надеюсь, ты довольна своей новой феей!>
 waitForUser
 removeWizForms
-tradeWizform.196
+tradeWizform.197
 setNpcModifier.-1.-1.1
 exit
 endIf
@@ -70,7 +70,7 @@ ifPlayerHasCards.1.2.39
 talk.<Я надеюсь, ты довольна своей новой феей!>
 waitForUser
 removeWizForms
-tradeWizform.168
+tradeWizform.169
 setNpcModifier.-1.-1.1
 exit
 else

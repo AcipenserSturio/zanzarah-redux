@@ -41,7 +41,7 @@ fight.-1.1
 exit"""
 InitScript = """
 setNpcType.3
-defaultWizForm.221.0.58
+defaultWizForm.222.0.58
 defaultWizForm.2.1.58
 defaultWizForm.11.2.58
 defaultWizForm.61.3.58

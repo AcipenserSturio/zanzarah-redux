@@ -49,9 +49,9 @@ label.11
 exit"""
 InitScript = """
 defaultWizForm.36.0.35
-defaultWizForm.149.1.40
-defaultWizForm.180.2.36
-defaultWizForm.199.3.30
+defaultWizForm.150.1.40
+defaultWizForm.181.2.36
+defaultWizForm.200.3.30
 defaultWizForm.52.4.25
 setModel.g300s30m"""
 UpdateScript = "lookAtPlayer.0.1"

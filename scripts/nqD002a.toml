@@ -64,7 +64,7 @@ setCamera.3005
 setTalkLabels.-1.-1."""
 InitScript = """
 setModel.v000s00
-defaultWizForm.181.0.10"""
+defaultWizForm.182.0.10"""
 UpdateScript = """
 deployNpcAtTrigger.15.0
 label.0

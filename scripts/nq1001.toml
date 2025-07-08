@@ -24,7 +24,7 @@ goto.5
 else
 goto.0
 label.5
-ifPlayerHasCards.1.2.234
+ifPlayerHasCards.1.2.235
 goto.0
 else
 goto.6

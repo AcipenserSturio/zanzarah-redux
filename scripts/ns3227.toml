@@ -6,7 +6,7 @@ waitForUser"""
 InitScript = """
 setNpcType.4
 setModel.g010s01m
-defaultWizForm.155.0.10"""
+defaultWizForm.156.0.10"""
 UpdateScript = """
 label.10
 idle

@@ -56,7 +56,7 @@ removeNpc"""
 InitScript = """
 setModel.d006s02m
 defaultWizForm.134.0.39
-defaultWizForm.168.1.37
+defaultWizForm.169.1.37
 defaultWizForm.110.2.33
 defaultWizForm.123.3.32
 defaultWizForm.46.4.31

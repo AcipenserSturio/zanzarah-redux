@@ -27,11 +27,11 @@ label.2
 exit"""
 InitScript = """
 setModel.g007s01m
-defaultWizForm.187.0.19
-defaultWizForm.152.1.14
+defaultWizForm.188.0.19
+defaultWizForm.153.1.14
 defaultWizForm.51.2.15
-defaultWizForm.147.3.17
-defaultWizForm.174.4.13"""
+defaultWizForm.148.3.17
+defaultWizForm.175.4.13"""
 UpdateScript = """
 deployNpcAtTrigger.67.0
 lookAtPlayer.-1.1"""

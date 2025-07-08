@@ -28,7 +28,7 @@ setTalkLabels.-1.-1.0
 talk.<
     Но сейчас такая великолепная арена захвачена злым {4*Темным Эльфом}.
     Дьявольские {4*Феи Тьмы} поддерживают его, самые сильные и опасные создания из глубин {4*Занзары}.
-    Будь осторожна, Эмми! 
+    Будь осторожна, Эми!
 >
 waitForUser
 changeWaypoint.1.2
@@ -38,7 +38,7 @@ changeDatabase.4C505E04
 exit"""
 InitScript = """
 setModel.v000s00
-defaultWizForm.181.0.10"""
+defaultWizForm.182.0.10"""
 UpdateScript = """
 label.0
 lookAtPlayer.3.0

@@ -33,10 +33,10 @@ endIf"""
 InitScript = """
 setModel.u000s00m
 defaultWizForm.38.0.33
-defaultWizForm.190.1.29
+defaultWizForm.191.1.29
 defaultWizForm.27.2.27
 defaultWizForm.120.3.30
-defaultWizForm.200.4.28"""
+defaultWizForm.201.4.28"""
 UpdateScript = """
 label.0
 idle

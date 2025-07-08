@@ -63,7 +63,7 @@ label.20
 setTalkLabels.-1.-1.0
 ifPlayerHasCards.500.0.4
 removePlayerCards.500.0.4
-givePlayerCards.1.2.162
+givePlayerCards.1.2.163
 talk.<
     Отлично, забирай фею.
     У меня была еще одна такая же, но она сбежала.
@@ -85,6 +85,6 @@ label.2
 exit"""
 InitScript = """
 setModel.d000s00m
-defaultWizForm.162.0.3
+defaultWizForm.163.0.3
 startActorEffect.0"""
 UpdateScript = "lookAtPlayer.0.1"

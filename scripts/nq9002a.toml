@@ -33,7 +33,7 @@ setTalkLabels.-1.-1.2
 talk.<
     Когда-то собирание и обучение фей считалось в {4*Занзаре} высшим искусством.
     Бои фей проходили по всей территории {4*Занзары}, а самые сильные Повелители фей встречались на арене.
-
+    
 >
 waitForUser
 talk.<
@@ -67,7 +67,7 @@ label.16
 exit"""
 InitScript = """
 setModel.v000s00
-defaultWizForm.181.0.10"""
+defaultWizForm.182.0.10"""
 UpdateScript = """
 deployNpcAtTrigger.43.0
 lookAtPlayer.-1.0"""

@@ -20,7 +20,7 @@ talk.<
 waitForUser
 talk.<
     Ты найдешь вход в Пустомирье на другой стороне {4*Большого Дерева} на болоте.
-
+    
 >
 waitForUser
 setTalkLabels.-1.-1.0

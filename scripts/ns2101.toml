@@ -38,7 +38,7 @@ talk.<
 waitForUser"""
 InitScript = """
 setModel.g004s03m
-defaultWizForm.179.0.10
+defaultWizForm.180.0.10
 movementSpeed.8"""
 UpdateScript = """
 label.0

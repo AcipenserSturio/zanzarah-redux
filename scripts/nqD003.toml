@@ -28,8 +28,8 @@ InitScript = """
 setModel.u001s01m
 defaultWizForm.67.0.34
 defaultWizForm.22.1.30
-defaultWizForm.172.2.36
-defaultWizForm.151.3.32
+defaultWizForm.173.2.36
+defaultWizForm.152.3.32
 defaultWizForm.90.4.35"""
 UpdateScript = """
 label.0

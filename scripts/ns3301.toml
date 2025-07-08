@@ -26,7 +26,7 @@ talk.<Что же, такое  решение более безопасно дл
 waitForUser"""
 InitScript = """
 setModel.d000s00m
-defaultWizForm.152.0.30
+defaultWizForm.153.0.30
 defaultWizForm.129.1.25
 defaultWizForm.48.2.30
 defaultWizForm.110.3.32

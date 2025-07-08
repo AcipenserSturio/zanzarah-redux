@@ -35,8 +35,8 @@ label.1006
 say.<Итак, какой твой выбор?>.0
 choice.0.<Эйрия (фея Воздуха)>
 choice.2.<Мортисия (фея Хаоса)>
-choice.3.<Ледос (фея Льда)>
-choice.4.<Фотонупс (фея Света)>
+choice.3.<Видар (фея Льда)>
+choice.4.<Ордис (фея Света)>
 waitForUser
 exit
 endIf
@@ -73,7 +73,7 @@ ifPlayerHasCards.1.0.17
 talk.<
     О, как здорово! Вот моя фея!
 >
-givePlayerCards.1.2.178
+givePlayerCards.1.2.179
 removePlayerCards.1.0.17
 createDynamicItems.0.1.-1
 removeWizForms

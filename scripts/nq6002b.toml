@@ -38,5 +38,5 @@ exit
 endIf"""
 InitScript = """
 setModel.w001s01m
-defaultWizForm.192.0.60"""
+defaultWizForm.193.0.60"""
 UpdateScript = "lookAtPlayer.0.1"

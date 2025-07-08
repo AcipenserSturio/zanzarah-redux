@@ -31,7 +31,7 @@ talk.<
     Мой муж никак не может успокоится.
     Тёмные Эльфы напали на нас, украли у нас всё, что смогли найти.
     Мой муж так испугался...
-
+    
 >
 waitForUser
 setTalkLabels.-1.-1.0
@@ -42,5 +42,5 @@ talk.<
 waitForUser"""
 InitScript = """
 setModel.g003s03m
-defaultWizForm.154.0.10"""
+defaultWizForm.155.0.10"""
 UpdateScript = "lookAtPlayer.0.1"

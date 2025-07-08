@@ -23,7 +23,7 @@ changeDatabase.5A886314
 exit"""
 InitScript = """
 setModel.v000s00
-defaultWizForm.181.0.10"""
+defaultWizForm.182.0.10"""
 UpdateScript = """
 label.0
 idle

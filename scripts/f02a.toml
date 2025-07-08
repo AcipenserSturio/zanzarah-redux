@@ -1,8 +1,8 @@
 UID = "015ABF24"
 Name = "B18BDDB1"
 TriggerScript = """
-ifPlayerHasCards.0.2.234
-say.<У тебя уже есть  фея!>.0
+ifPlayerHasCards.0.2.0
+tradingItem.1CEF5635.0
 waitForUser
 exit
 else
@@ -41,7 +41,7 @@ tradeWizform.27
 endIf
 ifNpcModifierHasValue.0
 removeWizForms
-tradeWizform.163
+tradeWizform.164
 endIf
 setCamera.1006
 removeNpcAtTrigger.3
@@ -73,7 +73,7 @@ endIf
 ifNpcModifierHasValue.0
 setNpcType.3
 setCollision.0
-wizform.0.163.0
+wizform.0.164.0
 exit
 endIf"""
 UpdateScript = "lookAtPlayer.0.0"

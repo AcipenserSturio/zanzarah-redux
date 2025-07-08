@@ -60,7 +60,7 @@ talk.<
     Вот, возьми эту редкую фею в знак моей благодарности.
 >
 waitForUser
-tradeWizform.217
+tradeWizform.218
 setCamera.3000
 changeWaypoint.1.2
 removeNpc
@@ -72,5 +72,5 @@ waitForUser
 exit"""
 InitScript = """
 setModel.g203s23m
-defaultWizForm.217.0.10"""
+defaultWizForm.218.0.10"""
 UpdateScript = "lookAtPlayer.-1.1"

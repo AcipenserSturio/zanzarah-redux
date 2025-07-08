@@ -44,5 +44,5 @@ givePlayerCards.20.0.4
 exit"""
 InitScript = """
 setModel.g300s30m
-defaultWizForm.150.0.10"""
+defaultWizForm.151.0.10"""
 UpdateScript = "lookAtPlayer.0.1"

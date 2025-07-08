@@ -31,7 +31,7 @@ startEffect.0.-1
 removeNpc"""
 InitScript = """
 setModel.v000s00
-defaultWizForm.181.0.10"""
+defaultWizForm.182.0.10"""
 UpdateScript = """
 label.0
 ifPlayerIsClose.10

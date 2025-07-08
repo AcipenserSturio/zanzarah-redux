@@ -15,9 +15,9 @@ InitScript = """
 setNpcType.3
 defaultWizForm.80.0.61
 defaultWizForm.25.1.61
-defaultWizForm.180.2.61
+defaultWizForm.181.2.61
 defaultWizForm.25.3.61
-defaultWizForm.180.4.61"""
+defaultWizForm.181.4.61"""
 DefeatedScript = """
 talk.<
     Ты победила меня?

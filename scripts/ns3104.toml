@@ -17,9 +17,9 @@ talk.<
 >
 waitForUser
 say.<Что ты хочешь?>.1
-choice.5.<Мумиокс (фея Хаоса)>
-choice.6.<Мортана (фея Тьмы)>
-choice.7.<Волнелла (фея Воды)>
+choice.5.<Фараон (фея Хаоса)>
+choice.6.<Юди (фея Тьмы)>
+choice.7.<Ярели (фея Воды)>
 choice.8.<Лайэйн (фея Света)>
 waitForUser
 label.5
@@ -27,11 +27,11 @@ givePlayerCards.1.2.101
 changeDatabase.B2EE3B04
 exit
 label.6
-givePlayerCards.1.2.146
+givePlayerCards.1.2.147
 changeDatabase.B2EE3B04
 exit
 label.7
-givePlayerCards.1.2.171
+givePlayerCards.1.2.172
 changeDatabase.B2EE3B04
 exit
 label.8

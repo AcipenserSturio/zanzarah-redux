@@ -9,7 +9,7 @@ setCamera.1006
 fight.-1.0"""
 InitScript = """
 setModel.u003s03m
-defaultWizForm.157.0.20
+defaultWizForm.158.0.20
 defaultWizForm.78.1.19
 defaultWizForm.9.2.23
 defaultWizForm.69.3.18

@@ -34,4 +34,4 @@ talk.<Может, мы там встретимся?>
 waitForUser"""
 InitScript = """
 setModel.v000s00
-defaultWizForm.181.0.10"""
+defaultWizForm.182.0.10"""

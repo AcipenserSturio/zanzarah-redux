@@ -21,7 +21,7 @@ talk.<
     Tre hreafas pegab.
     Al y'az loraghar kipva y'dapebveg'qox y'wuravz'i'h lo ro'xoq y'gfar.
     Pi az l'co'i'h an pegab qrora'p'y...
-
+    
 >
 waitForUser
 talk.<
@@ -61,10 +61,6 @@ setupGambling.1.1.185
 setupGambling.1.1.188
 setupGambling.1.1.192
 setupGambling.1.1.198
-setupGambling.1.1.200
-setupGambling.1.1.205
-setupGambling.1.1.211
-setupGambling.1.1.215
 setupGambling.1.1.224
 setupGambling.1.1.218
 waitForUser
@@ -74,7 +70,7 @@ exit
 killPlayer
 setCamera.1000
 changeWaypoint.-1.-1
-talk.<Do you want to eat or drink?>
+talk.<Приветствую в Занзаре, человек.>
 exit
 endIf"""
 InitScript = """

@@ -20,7 +20,7 @@ talk.<
     Ты хорошо обходишься с моей феей?
     Ее благополучие для меня очень много значит.
     Её надо тренировать и снабдить сильной магией.
-
+    
 >
 waitForUser
 setCamera.1006
@@ -40,7 +40,7 @@ movementSpeed.10
 defaultWizForm.0.0.14
 defaultWizForm.72.1.8
 defaultWizForm.96.2.9
-defaultWizForm.158.3.13
+defaultWizForm.159.3.13
 defaultWizForm.4.4.16"""
 UpdateScript = """
 label.0

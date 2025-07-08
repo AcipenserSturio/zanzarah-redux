@@ -8,7 +8,7 @@ setTalkLabels.-1.-1.0
 talk.<
     Путешествующая Повелительница фей! Какая удача! Я отчаянно ищу Фею Света {4*Скелхрома}.
     Если ты его найдешь, я дам тебе уникальную фею {4*Сегбуза}.
-
+    
 >
 waitForUser
 ifPlayerHasCards.1.0.26
@@ -30,7 +30,7 @@ choice.1.<Купить предметы>
 choice.2.<До встречи>
 waitForUser
 label.0
-ifPlayerHasCards.1.2.228
+ifPlayerHasCards.1.2.229
 setTalkLabels.-1.-1.0
 talk.<
     Хм, ты пытаешься продать мне ненастоящего {4*Скелхрома}.
@@ -75,7 +75,7 @@ tradingItem.25.2E2FB8A3
 waitForUser
 goto.20
 label.15
-ifPlayerHasCards.1.2.228
+ifPlayerHasCards.1.2.229
 setTalkLabels.-1.-1.0
 talk.<
     Наконец, я полностью собрала коллекцию фей своей мечты! Вот, возьми {4*Сегбуза}.
@@ -86,7 +86,7 @@ setTalkLabels.-1.-1.2
 talk.<
     На {4*Большом Дереве} на болоте будет крупный турнир.
     В нем будут участвовать лучшие Повелители фей.
-
+    
 >
 waitForUser
 setTalkLabels.-1.-1.0

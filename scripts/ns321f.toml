@@ -116,5 +116,5 @@ label.1000
 exit"""
 InitScript = """
 setModel.g201s21m
-defaultWizForm.184.0.10"""
+defaultWizForm.185.0.10"""
 UpdateScript = "lookAtPlayer.0.1"

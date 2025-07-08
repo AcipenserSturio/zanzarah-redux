@@ -3,10 +3,10 @@ Name = "79110B91"
 InitScript = """
 gotoRandomLabel.3.0
 label.0
-defaultWizForm.164.0.54
+defaultWizForm.165.0.54
 goto.3
 label.1
-defaultWizForm.168.0.45
+defaultWizForm.169.0.45
 goto.3
 label.2
 defaultWizForm.100.0.47

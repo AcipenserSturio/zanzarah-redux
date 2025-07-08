@@ -10,7 +10,7 @@ setTalkLabels.-1.-1.2
 talk.<
     {4*Я} один дойду до вершины башни и завоюю приз.
     Я настоящий герой, который низвергнет силы Тьмы раз и навсегда.
-
+    
 >
 waitForUser
 setTalkLabels.10.11.1
@@ -34,8 +34,8 @@ setModel.g204s20m
 defaultWizForm.112.0.31
 defaultWizForm.121.1.36
 defaultWizForm.2.2.34
-defaultWizForm.156.3.41
-defaultWizForm.191.4.39"""
+defaultWizForm.157.3.41
+defaultWizForm.192.4.39"""
 UpdateScript = """
 label.0
 lookAtPlayer.1.1

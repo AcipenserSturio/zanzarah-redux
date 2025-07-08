@@ -38,5 +38,5 @@ label.2
 exit"""
 InitScript = """
 setModel.d003s03m
-defaultWizForm.144.0.10"""
+defaultWizForm.145.0.10"""
 UpdateScript = "lookAtPlayer.-1.1"

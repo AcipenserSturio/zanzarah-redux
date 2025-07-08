@@ -17,7 +17,7 @@ waitForUser
 talk.<
     Эти дурные {4*пикси} украли мой драгоценный {4*серебряный шар}.
     Теперь я больше не могу ловить фей.
-
+    
 >
 waitForUser
 setTalkLabels.-1.-1.0
@@ -54,7 +54,7 @@ waitForUser
 talk.<
     Эти дурные {4*пикси} украли мой драгоценный {4*серебряный шар}.
     Теперь я больше не могу ловить фей.
-
+    
 >
 waitForUser
 setTalkLabels.-1.-1.0
@@ -70,7 +70,7 @@ talk.<
 waitForUser
 label.1006
 say.<Итак, каков твой выбор?>.0
-choice.6.<Ментана (Сай-фея)>
+choice.6.<Гара (Сай-фея)>
 choice.4.<Дарбоид (фея Металла)>
 choice.5.<Бес (фея Хаоса)>
 choice.3.<Гризли (фея Тьмы)>
@@ -92,7 +92,7 @@ waitForUser
 talk.<
     Эти дурные {4*пикси} украли мой драгоценный {4*серебряный шар}.
     Теперь я больше не могу ловить фей.
-
+    
 >
 waitForUser
 setTalkLabels.-1.-1.0
@@ -110,7 +110,7 @@ exit
 endIf
 label.8
 setTalkLabels.-1.-1.0
-talk.<Do you want to eat or drink?>
+talk.<Приветствую в Занзаре, человек.>
 waitForUser
 exit
 endIf
@@ -122,19 +122,19 @@ exit
 endIf
 label.5
 removePlayerCards.1.0.17
-givePlayerCards.1.2.157
+givePlayerCards.1.2.158
 changeDatabase.C4A9C594
 exit
 endIf
 label.6
 removePlayerCards.1.0.17
-givePlayerCards.1.2.174
+givePlayerCards.1.2.175
 changeDatabase.C4A9C594
 exit
 endIf
 label.3
 removePlayerCards.1.0.17
-givePlayerCards.1.2.177
+givePlayerCards.1.2.178
 changeDatabase.C4A9C594
 exit
 endIf
